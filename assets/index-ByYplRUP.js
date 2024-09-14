@@ -2,7 +2,7 @@ const __vite__mapDeps = (
   i,
   m = __vite__mapDeps,
   d = m.f ||
-    (m.f = ["./assets/index-CqFhiEtL.js", "./assets/index-CpEq9FWA.css"])
+    (m.f = ["./index-CqFhiEtL.js", "./index-CpEq9FWA.css"])
 ) => i.map((i) => d[i]);
 (function () {
   const t = document.createElement("link").relList;
