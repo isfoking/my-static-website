@@ -1,32 +1,63 @@
 {
-  "name": "CH5 PWA Demo",
-  "short_name": "CH5 Demo",
-  "start_url": "./index.html",
-  "id": "/ch5-pwa-demo/",
-  "display_override": ["window-controls-overlay", "standalone"],
+  "name": "Progressive Web Application",
+  "short_name": "PWA",
+  "start_url": "/pwa-install/",
   "display": "standalone",
-  "description": "CH5 PWA Demo",
-  "background-color": "#888",
-  "lang": "en",
+  "background_color": "#fff",
+  "theme_color": "#82307b",
+  "description": "Installation component for Progressive Web Application DEMO",
   "icons": [
     {
-      "src": "./assets/vite.png",
-      "sizes": "800x800",
-      "type": "image/png"
+      "src": "icons/icon@192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon@512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
     }
   ],
   "screenshots": [
     {
-      "src": "./assets/screenshot_narrow.jpg",
-      "type": "image/jpeg",
-      "sizes": "540x720",
-      "form_factor": "narrow"
+      "src": "screenshots/mobile-1.jpg",
+      "sizes": "551x979",
+      "type": "image/jpeg"
     },
     {
-      "src": "./assets/screenshot_wide.jpg",
+      "src": "screenshots/mobile-2.jpg",
+      "sizes": "518x922",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "screenshots/mobile-3.jpg",
+      "sizes": "518x922",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "screenshots/tablet-1.jpg",
+      "sizes": "1270x800",
       "type": "image/jpeg",
-      "sizes": "1024x593",
       "form_factor": "wide"
+    },
+    {
+      "src": "screenshots/tablet-2.jpg",
+      "sizes": "1270x800",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.learnpwa.app",
+      "url": "https://play.google.com/store/apps/details?id=com.learnpwa.app"
+    },
+    {
+      "platform": "webapp",
+      "url": "manifest.json"
     }
   ]
 }
