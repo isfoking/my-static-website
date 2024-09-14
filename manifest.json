@@ -1,9 +1,9 @@
 {
   "name": "CH5 PWA Demo",
   "short_name": "CH5 Demo",
-  "start_url": "https://192.168.1.223/ch5-pwa-demo/index.html",
+  "start_url": "./index.html",
   "id": "/ch5-pwa-demo/",
-  "display_override": ["window-controls-overlay","standalone"],
+  "display_override": ["window-controls-overlay", "standalone"],
   "display": "standalone",
   "description": "CH5 PWA Demo",
   "background-color": "#888",
