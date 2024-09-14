@@ -31,24 +31,7 @@ define(["./workbox-28fe7b12"], function (e) {
   "use strict";
   self.skipWaiting(),
     e.clientsClaim(),
-    e.precacheAndRoute(
-      [
-        // { url: "assets/index-ByYplRUP.js", revision: null },
-        // { url: "assets/index-CovGLJd7.css", revision: null },
-        // { url: "assets/index-CpEq9FWA.css", revision: null },
-        // { url: "assets/index-CqFhiEtL.js", revision: null },
-        // { url: "assets/index-DObC8IMK.js", revision: null },
-        // { url: "index.html", revision: "7536ac4b9fb085ab421cc5dc9075e98f" },
-        // { url: "main.js", revision: "a963d527837c892b499dd5f5ce2e703c" },
-        // { url: "registerSW.js", revision: "1872c500de691dce40960bb85481de07" },
-        // { url: "logo.png", revision: "46fdfeb816da674bbf08b7bf1124dc13" },
-        // {
-        //   url: "manifest.webmanifest",
-        //   revision: "77ae33dd3e4cba324edf6ee19efa7258",
-        // },
-      ],
-      {}
-    ),
+    e.precacheAndRoute([], {}),
     e.cleanupOutdatedCaches(),
     e.registerRoute(
       new e.NavigationRoute(e.createHandlerBoundToURL("index.html"))
