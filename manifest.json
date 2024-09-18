@@ -17,22 +17,22 @@
   ],
   "screenshots": [
     {
-      "src": "./assets/a1.png",
+      "src": "./assets/a1.webp",
       "type": "image/webp",
       "sizes": "526x296"
     },
     {
-      "src": "./assets/a2.png",
+      "src": "./assets/a2.webp",
       "type": "image/webp",
       "sizes": "526x296"
     },
     {
-      "src": "./assets/a3.png",
+      "src": "./assets/a3.webp",
       "type": "image/webp",
       "sizes": "526x296"
     },
     {
-      "src": "./assets/a4.png",
+      "src": "./assets/a4.webp",
       "type": "image/webp",
       "sizes": "526x296"
     }
