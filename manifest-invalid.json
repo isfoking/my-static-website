@@ -1,5 +1,4 @@
 {
-  "name": "my PWA",
   "short_name": "pwa",
   "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum porttitor libero id hendrerit. Sed id arcu hendrerit, pellentesque ante sed, maximus odio.",
   "orientation": "portrait",
@@ -30,7 +29,7 @@
     "Microsoft Graph",
     "Low latency",
     "fast",
-    "cross platform, this is a long feature to test. Lets add some more text."
+    "cross platform"
   ],
   "icons": [
     {

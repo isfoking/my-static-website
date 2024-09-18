@@ -1,49 +1,36 @@
-var cacheName = "PWAinstallDemo-9.8.2024/13:51:13",
-  filesToCache = ["./pwa-install/", "./manifest.json"];
-function sendMessage(e, n) {
-  return new Promise(function (t, s) {
-    var a = new MessageChannel();
-    e.postMessage(n, [a.port2]);
-  });
-}
-function sendMessageToAll(e, n) {
-  clients.matchAll().then((t) => {
-    t.forEach((n) => {
-      sendMessage(n, e);
-    }),
-      n && "function" == typeof n && n();
-  });
-}
-self.addEventListener("install", function (e) {
-  e.waitUntil(
-    caches.open(cacheName).then(function (e) {
-      return e.addAll(filesToCache);
+// This is the service worker with the Cache-first network
+
+const CACHE = "pwabuilder-precachev2";
+const precacheFiles = [
+  /* Add an array of files to precache for your app */
+  
+];
+
+self.addEventListener("install", function (event) {
+  console.log("[PWA Builder] Install Event processing");
+
+  console.log("[PWA Builder] Skip waiting on install");
+  self.skipWaiting();
+
+  event.waitUntil(
+    caches.open(CACHE).then(function (cache) {
     })
-  ),
-    self.skipWaiting();
-}),
-  self.addEventListener("activate", function (e) {
-    return (
-      e.waitUntil(
-        caches.keys().then(function (e) {
-          return Promise.all(
-            e.map(function (e) {
-              if (e !== cacheName)
-                return sendMessageToAll("NEW_VERSION"), caches.delete(e);
-            })
-          );
-        })
-      ),
-      self.clients.claim()
-    );
-  }),
-  self.addEventListener("fetch", function (e) {
-    e.respondWith(
-      caches.match(e.request, { ignoreSearch: !0 }).then(function (n) {
-        return n || fetch(e.request);
-      })
-    );
-  }),
-  self.addEventListener("message", (e) => {
-    e && e.data && e.data.message;
-  });
+  );
+});
+
+// Allow sw to control of current page
+self.addEventListener("activate", function (event) {
+  console.log("[PWA Builder] Claiming clients for current page");
+  event.waitUntil(self.clients.claim());
+});
+
+// If any fetch fails, it will look for the request in the cache and serve it from there first
+self.addEventListener("fetch", function (event) {
+ 
+});
+
+function fromCache(request) {
+}
+
+function updateCache(request, response) {
+}
