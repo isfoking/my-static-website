@@ -33,7 +33,7 @@ function startProgress() {
 // 手动触发PWA安装
 function addToDesktop() {
   var ref = document.getElementById("installComponent");
-  ref.openmodal = true;
+  // ref.openmodal = true;
   console.dir(ref);
   Adjust.trackEvent({
     eventToken: "fvu5nh",
