@@ -1,33 +1,88 @@
-body {
-  background-color: #546E7A;
-  color: white;
-  font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+html{
+    background-color: #82307b;
+    width: 100%;
+    height: 100%;
+}
+body{
+    /* background: linear-gradient(90deg, rgba(144,92,180,1) 0%, rgba(255,90,152,1) 50%, rgba(255,201,124,1) 100%); */
+
+    height: 100%;
+    margin: 0;
+}
+.control-panel{
+    font-family: system-ui, -apple-system, 'HelveticaNeue', BlinkMacSystemFont, "Roboto", "Segoe UI";
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.control-panel header{
+    font-size: 0;
+    display: flex;
+    gap: 5px;
+    margin: 0px 15px;
+    margin-top: 15px;
+    
+}
+.control-panel header img{
+    opacity: 0.5;
+}
+.control-panel header img:hover{
+    opacity: 1;
 }
 
-a, a:visited {
-  color: white;
+.control-panel fieldset:hover{
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+.control-panel fieldset{
+    color: #fff;
+    
+    border-color: #FFF;
+    border-style: dotted;
+}
+.control-panel > fieldset{
+    opacity: .5;
+    margin: 15px;
+}
+.control-panel fieldset:hover{ 
+    opacity: 1;
 }
 
-h1 {
-  text-align: center;
+.control-panel textarea{
+    color: #fff;
+    background: transparent;
+    min-width: 300px;
+    border: transparent;
+}
+.control-panel button, .control-panel input{
+    background: transparent;
+    color: #fff;
+    border-radius: 3px;
+    border: 1px solid #fff;
+
+    padding: 5px 10px;
+}
+input::placeholder{
+    color: #fff;
+}
+input + br + input {
+    margin-top: 5px;
+}
+input[type="checkbox"]{
+    margin-top: 10px;
 }
 
-.hidden {
-  display: none !important;
+
+.control-panel button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
-#installContainer {
-  position: absolute;
-  bottom: 1em;
-  display: flex;
-  justify-content: center;
-  width: 100%;
+.control-panel hr{
+    border: 2px dotted #fff;
+    border-bottom: none;
 }
 
-#installContainer button {
-  background-color: inherit;
-  border: 1px solid white;
-  color: white;
-  font-size: 1em;
-  padding: 0.75em;
+label + fieldset {
+    margin-top: 5px;
 }
