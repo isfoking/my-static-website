@@ -22,7 +22,7 @@
       "sizes": "382x827"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "https://fifa-world.s3.ap-southeast-3.amazonaws.com/web-platform-mobile/index.html",
   "display": "standalone",
   "background_color": "#000",
   "theme_color": "#000",
