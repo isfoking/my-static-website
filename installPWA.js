@@ -32,26 +32,38 @@ function startProgress() {
 
 // 手动触发PWA安装
 function addToDesktop() {
-  var ref = document.getElementById("installComponent");
-  ref.install();
+  var installComponent = document.getElementById("installComponent");
+
+  installComponent.showDialog(true);
 
   Adjust.trackEvent({
     eventToken: "fvu5nh",
   });
-  // 监听安装结果
-  ref.deferredprompt.userChoice.then((choiceResult) => {
-    if (choiceResult.outcome === "accepted") {
+
+  // // 监听安装结果
+  // installComponent.deferredprompt.userChoice.then((choiceResult) => {
+  //   if (choiceResult.outcome === "accepted") {
+  //     startProgress();
+  //     Adjust.trackEvent({
+  //       eventToken: "3d3a82",
+  //     });
+  //     console.log("install PWA");
+  //   } else {
+  //     console.log("no PWA");
+  //   }
+
+  //   // 重置事件
+  //   deferredPrompt = null;
+  // });
+  installComponent.addEventListener("pwa-user-choice-result-event", (event) => {
+    if (event.detail.message == "accepted") {
       startProgress();
       Adjust.trackEvent({
         eventToken: "3d3a82",
       });
       console.log("install PWA");
-    } else {
-      console.log("no PWA");
     }
-
-    // 重置事件
-    deferredPrompt = null;
+    // startProgress();
   });
 }
 
@@ -69,7 +81,7 @@ window.addEventListener("load", function () {
   }
 });
 
-// // 监听beforeinstallprompt事件，该事件在网站满足PWA安装条件时触发，保存安装事件
+// 监听beforeinstallprompt事件，该事件在网站满足PWA安装条件时触发，保存安装事件
 window.addEventListener("beforeinstallprompt", (e) => {
   console.log("触发", e);
   e.preventDefault();
