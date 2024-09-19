@@ -34,7 +34,7 @@ function startProgress() {
 function addToDesktop() {
   var installComponent = document.getElementById("installComponent");
 
-  installComponent.showDialog(true);
+  installComponent.install();
 
   Adjust.trackEvent({
     eventToken: "fvu5nh",
