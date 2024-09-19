@@ -1,56 +1,75 @@
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+var __decorate =
+  (this && this.__decorate) ||
+  function (decorators, target, key, desc) {
+    var c = arguments.length,
+      r =
+        c < 3
+          ? target
+          : desc === null
+          ? (desc = Object.getOwnPropertyDescriptor(target, key))
+          : desc,
+      d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function")
+      r = Reflect.decorate(decorators, target, key, desc);
+    else
+      for (var i = decorators.length - 1; i >= 0; i--)
+        if ((d = decorators[i]))
+          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
+  };
 import { LitElement, html, customElement, property, css } from "lit-element";
 let pwainstall = class pwainstall extends LitElement {
-    constructor() {
-        super();
-        this.manifestpath = "manifest.json";
-        this.iconpath = "";
-        this.manifestdata = {
-            name: "",
-            short_name: "",
-            description: "",
-            icons: [],
-            screenshots: [],
-            features: [],
-        };
-        this.openmodal = false;
-        this.hasprompt = false;
-        this.usecustom = false;
-        this.relatedApps = [];
-        this.explainer = "This app can be installed on your PC or mobile device.  This will allow this web app to look and behave like any other installed app.  You will find it in your app lists and be able to pin it to your home screen, start menus or task bars.  This installed web app will also be able to safely interact with other apps and your operating system. ";
-        this.featuresheader = "Key Features";
-        this.descriptionheader = "Description";
-        this.installbuttontext = "Install";
-        this.cancelbuttontext = "Cancel";
-        this.iosinstallinfotext = "Tap the share button and then 'Add to Homescreen'";
-        // check for beforeinstallprompt support
-        this.isSupportingBrowser = window.hasOwnProperty("BeforeInstallPromptEvent");
-        // handle iOS specifically
-        // this includes the regular iPad
-        // and the iPad pro
-        // but not macOS
-        this.isIOS =
-            navigator.userAgent.includes("iPhone") ||
-                navigator.userAgent.includes("iPad") ||
-                (navigator.userAgent.includes("Macintosh") &&
-                    typeof navigator.maxTouchPoints === "number" &&
-                    navigator.maxTouchPoints > 2);
-        this.installed = false;
-        // grab an install event
-        window.addEventListener("beforeinstallprompt", (event) => this.handleInstallPromptEvent(event));
-        document.addEventListener("keyup", (event) => {
-            if (event.key === "Escape") {
-                this.cancel();
-            }
-        });
-    }
-    static get styles() {
-        return css `
+  constructor() {
+    super();
+    this.manifestpath = "manifest.json";
+    this.iconpath = "";
+    this.manifestdata = {
+      name: "",
+      short_name: "",
+      description: "",
+      icons: [],
+      screenshots: [],
+      features: [],
+    };
+    this.openmodal = false;
+    this.hasprompt = false;
+    this.usecustom = false;
+    this.relatedApps = [];
+    this.explainer =
+      "This app can be installed on your PC or mobile device.  This will allow this web app to look and behave like any other installed app.  You will find it in your app lists and be able to pin it to your home screen, start menus or task bars.  This installed web app will also be able to safely interact with other apps and your operating system. ";
+    this.featuresheader = "Key Features";
+    this.descriptionheader = "Description";
+    this.installbuttontext = "Install";
+    this.cancelbuttontext = "Cancel";
+    this.iosinstallinfotext =
+      "Tap the share button and then 'Add to Homescreen'";
+    // check for beforeinstallprompt support
+    this.isSupportingBrowser = window.hasOwnProperty(
+      "BeforeInstallPromptEvent"
+    );
+    // handle iOS specifically
+    // this includes the regular iPad
+    // and the iPad pro
+    // but not macOS
+    this.isIOS =
+      navigator.userAgent.includes("iPhone") ||
+      navigator.userAgent.includes("iPad") ||
+      (navigator.userAgent.includes("Macintosh") &&
+        typeof navigator.maxTouchPoints === "number" &&
+        navigator.maxTouchPoints > 2);
+    this.installed = false;
+    // grab an install event
+    window.addEventListener("beforeinstallprompt", (event) =>
+      this.handleInstallPromptEvent(event)
+    );
+    document.addEventListener("keyup", (event) => {
+      if (event.key === "Escape") {
+        this.cancel();
+      }
+    });
+  }
+  static get styles() {
+    return css`
       :host {
         --install-focus-color: #919c9c;
         --install-button-color: #0078d4;
@@ -593,170 +612,182 @@ let pwainstall = class pwainstall extends LitElement {
         }
       }
     `;
+  }
+  async firstUpdated() {
+    if (this.manifestpath) {
+      try {
+        await this.getManifestData();
+      } catch (err) {
+        console.error(
+          "Error getting manifest, check that you have a valid web manifest"
+        );
+      }
     }
-    async firstUpdated() {
-        if (this.manifestpath) {
-            try {
-                await this.getManifestData();
-            }
-            catch (err) {
-                console.error("Error getting manifest, check that you have a valid web manifest");
-            }
-        }
-        if ("getInstalledRelatedApps" in navigator) {
-            this.relatedApps = await navigator.getInstalledRelatedApps();
-        }
+    if ("getInstalledRelatedApps" in navigator) {
+      this.relatedApps = await navigator.getInstalledRelatedApps();
     }
-    handleInstallPromptEvent(event) {
-        this.deferredprompt = event;
-        this.hasprompt = true;
-        event.preventDefault();
+  }
+  handleInstallPromptEvent(event) {
+    this.deferredprompt = event;
+    this.hasprompt = true;
+    event.preventDefault();
+  }
+  // Check that the manifest has our 3 required properties
+  // If not console an error to the user and return
+  checkManifest(manifestData) {
+    if (!manifestData.icons || !manifestData.icons[0]) {
+      console.error("Your web manifest must have atleast one icon listed");
+      return;
     }
-    // Check that the manifest has our 3 required properties
-    // If not console an error to the user and return
-    checkManifest(manifestData) {
-        if (!manifestData.icons || !manifestData.icons[0]) {
-            console.error("Your web manifest must have atleast one icon listed");
-            return;
-        }
-        if (!manifestData.name) {
-            console.error("Your web manifest must have a name listed");
-            return;
-        }
-        if (!manifestData.description) {
-            console.error("Your web manifest must have a description listed");
-            return;
-        }
+    if (!manifestData.name) {
+      console.error("Your web manifest must have a name listed");
+      return;
     }
-    async getManifestData() {
-        try {
-            const response = await fetch(this.manifestpath);
-            const data = await response.json();
-            this.manifestdata = data;
-            if (this.manifestdata) {
-                this.checkManifest(this.manifestdata);
-                return data;
-            }
-        }
-        catch (err) { }
-        return null;
+    if (!manifestData.description) {
+      console.error("Your web manifest must have a description listed");
+      return;
     }
-    scrollToLeft() {
-        var _a;
-        const screenshotsDiv = (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.querySelector("#screenshots");
-        // screenshotsDiv.scrollBy(-10, 0);
-        screenshotsDiv === null || screenshotsDiv === void 0 ? void 0 : screenshotsDiv.scrollBy({
-            // left: -15,
-            left: -screenshotsDiv.clientWidth,
-            top: 0,
-            behavior: "smooth",
+  }
+  async getManifestData() {
+    try {
+      const response = await fetch(this.manifestpath);
+      const data = await response.json();
+      this.manifestdata = data;
+      if (this.manifestdata) {
+        this.checkManifest(this.manifestdata);
+        return data;
+      }
+    } catch (err) {}
+    return null;
+  }
+  scrollToLeft() {
+    var _a;
+    const screenshotsDiv =
+      (_a = this.shadowRoot) === null || _a === void 0
+        ? void 0
+        : _a.querySelector("#screenshots");
+    // screenshotsDiv.scrollBy(-10, 0);
+    screenshotsDiv === null || screenshotsDiv === void 0
+      ? void 0
+      : screenshotsDiv.scrollBy({
+          // left: -15,
+          left: -screenshotsDiv.clientWidth,
+          top: 0,
+          behavior: "smooth",
         });
-    }
-    scrollToRight() {
-        var _a;
-        const screenshotsDiv = (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.querySelector("#screenshots");
-        // screenshotsDiv.scrollBy(10, 0);
-        screenshotsDiv === null || screenshotsDiv === void 0 ? void 0 : screenshotsDiv.scrollBy({
-            // left: 15,
-            left: screenshotsDiv.clientWidth,
-            top: 0,
-            behavior: "smooth",
+  }
+  scrollToRight() {
+    var _a;
+    const screenshotsDiv =
+      (_a = this.shadowRoot) === null || _a === void 0
+        ? void 0
+        : _a.querySelector("#screenshots");
+    // screenshotsDiv.scrollBy(10, 0);
+    screenshotsDiv === null || screenshotsDiv === void 0
+      ? void 0
+      : screenshotsDiv.scrollBy({
+          // left: 15,
+          left: screenshotsDiv.clientWidth,
+          top: 0,
+          behavior: "smooth",
         });
-    }
-    openPrompt() {
-        this.openmodal = true;
-        let event = new CustomEvent("show");
-        this.dispatchEvent(event);
-        this.updateComplete.then(() => {
-            var _a, _b;
-            (_b = (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.querySelector("#closeButton")) === null || _b === void 0 ? void 0 : _b.focus();
-        });
-    }
-    closePrompt() {
-        this.openmodal = false;
+  }
+  openPrompt() {
+    this.openmodal = true;
+    let event = new CustomEvent("show");
+    this.dispatchEvent(event);
+    this.updateComplete.then(() => {
+      var _a, _b;
+      (_b =
+        (_a = this.shadowRoot) === null || _a === void 0
+          ? void 0
+          : _a.querySelector("#closeButton")) === null || _b === void 0
+        ? void 0
+        : _b.focus();
+    });
+  }
+  closePrompt() {
+    this.openmodal = false;
+    let event = new CustomEvent("hide");
+    this.dispatchEvent(event);
+  }
+  shouldShowInstall() {
+    const eligibleUser =
+      this.isSupportingBrowser &&
+      this.relatedApps.length < 1 &&
+      (this.hasprompt || this.isIOS);
+    return eligibleUser;
+  }
+  async install() {
+    if (this.deferredprompt) {
+      this.deferredprompt.prompt();
+      let event = new CustomEvent("show");
+      this.dispatchEvent(event);
+      const choiceResult = await this.deferredprompt.userChoice;
+      if (choiceResult.outcome === "accepted") {
+        console.log("Your PWA has been installed");
+        await this.cancel();
+        this.installed = true;
         let event = new CustomEvent("hide");
         this.dispatchEvent(event);
+        return true;
+      } else {
+        console.log("User chose to not install your PWA");
+        await this.cancel();
+        // set installed to true because we dont
+        // want to show the install button to
+        // a user who chose not to install
+        this.installed = true;
+        let event = new CustomEvent("hide");
+        this.dispatchEvent(event);
+      }
     }
-    shouldShowInstall() {
-        const eligibleUser = this.isSupportingBrowser &&
-            this.relatedApps.length < 1 &&
-            (this.hasprompt || this.isIOS);
-        return eligibleUser;
+    return false;
+  }
+  getInstalledStatus() {
+    // cast to any because the typescript navigator object
+    // does not have this non standard safari object
+    if (navigator.standalone) {
+      return navigator.standalone;
+    } else if (matchMedia("(display-mode: standalone)").matches) {
+      return true;
+    } else {
+      return false;
     }
-    async install() {
-        if (this.deferredprompt) {
-            this.deferredprompt.prompt();
-            let event = new CustomEvent("show");
-            this.dispatchEvent(event);
-            const choiceResult = await this.deferredprompt.userChoice;
-            if (choiceResult.outcome === "accepted") {
-                console.log("Your PWA has been installed");
-                await this.cancel();
-                this.installed = true;
-                let event = new CustomEvent("hide");
-                this.dispatchEvent(event);
-                return true;
-            }
-            else {
-                console.log("User chose to not install your PWA");
-                await this.cancel();
-                // set installed to true because we dont
-                // want to show the install button to
-                // a user who chose not to install
-                this.installed = true;
-                let event = new CustomEvent("hide");
-                this.dispatchEvent(event);
-            }
-        }
-        return false;
-    }
-    getInstalledStatus() {
-        // cast to any because the typescript navigator object
-        // does not have this non standard safari object
-        if (navigator.standalone) {
-            return navigator.standalone;
-        }
-        else if (matchMedia("(display-mode: standalone)").matches) {
-            return true;
-        }
-        else {
-            return false;
-        }
-    }
-    cancel() {
-        return new Promise((resolve, reject) => {
-            this.openmodal = false;
-            if (this.hasAttribute("openmodal")) {
-                this.removeAttribute("openmodal");
-            }
-            let event = new CustomEvent("hide");
-            this.dispatchEvent(event);
-            resolve();
-        });
-    }
-    focusOut() {
-        console.log("focus out");
-    }
-    render() {
-        return html `
-      ${("standalone" in navigator &&
-            navigator.standalone === false) ||
-            (this.usecustom !== true &&
-                this.shouldShowInstall() &&
-                this.installed === false)
-            ? html `<button
+  }
+  cancel() {
+    return new Promise((resolve, reject) => {
+      this.openmodal = false;
+      if (this.hasAttribute("openmodal")) {
+        this.removeAttribute("openmodal");
+      }
+      let event = new CustomEvent("hide");
+      this.dispatchEvent(event);
+      resolve();
+    });
+  }
+  focusOut() {
+    console.log("focus out");
+  }
+  render() {
+    return html`
+      ${("standalone" in navigator && navigator.standalone === false) ||
+      (this.usecustom !== true &&
+        this.shouldShowInstall() &&
+        this.installed === false)
+        ? html`<button
             part="openButton"
             id="openButton"
             @click="${() => this.openPrompt()}"
           >
             <slot> ${this.installbuttontext} </slot>
           </button>`
-            : null}
+        : null}
       ${this.openmodal === true
-            ? html `
+        ? html`
             <dialog id="installModalWrapper">
               ${this.openmodal
-                ? html `<div
+                ? html`<div
                     id="background"
                     @click="${() => this.cancel()}"
                   ></div>`
@@ -766,15 +797,15 @@ let pwainstall = class pwainstall extends LitElement {
                   <div id="logoContainer">
                     <img
                       src="${this.iconpath
-                ? this.iconpath
-                : this.manifestdata.icons[0].src}"
+                        ? this.iconpath
+                        : this.manifestdata.icons[0].src}"
                       alt="App Logo"
                     />
 
                     <div id="installTitle">
                       <h1>
                         ${this.manifestdata.short_name ||
-                this.manifestdata.name}
+                        this.manifestdata.name}
                       </h1>
 
                       <p id="desc">${this.explainer}</p>
@@ -807,20 +838,22 @@ let pwainstall = class pwainstall extends LitElement {
                 <div id="contentContainer">
                   <div id="featuresScreenDiv">
                     ${this.manifestdata.features
-                ? html `<div id="keyFeatures">
+                      ? html`<div id="keyFeatures">
             <h3>${this.featuresheader}</h3>
             <ul>
-              ${this.manifestdata.features
-                    ? this.manifestdata.features.map((feature) => {
-                        return html ` <li>${feature}</li> `;
+              ${
+                this.manifestdata.features
+                  ? this.manifestdata.features.map((feature) => {
+                      return html` <li>${feature}</li> `;
                     })
-                    : null}
+                  : null
+              }
             </ul>
           </div>
           </div>`
-                : null}
+                      : null}
                     ${this.manifestdata.screenshots
-                ? html `
+                      ? html`
                           <div id="screenshotsContainer">
                             <button
                               @click="${() => this.scrollToLeft()}"
@@ -837,7 +870,7 @@ let pwainstall = class pwainstall extends LitElement {
                             </button>
                             <section id="screenshots">
                               ${this.manifestdata.screenshots.map((screen) => {
-                    return html `
+                                return html`
                                   <div>
                                     <img
                                       alt="App Screenshot"
@@ -845,7 +878,7 @@ let pwainstall = class pwainstall extends LitElement {
                                     />
                                   </div>
                                 `;
-                })}
+                              })}
                             </section>
                             <button
                               @click="${() => this.scrollToRight()}"
@@ -862,7 +895,7 @@ let pwainstall = class pwainstall extends LitElement {
                             </button>
                           </div>
                         `
-                : null}
+                      : null}
                   </div>
 
                   <div id="descriptionWrapper">
@@ -874,82 +907,128 @@ let pwainstall = class pwainstall extends LitElement {
                 </div>
 
                 ${!this.isIOS
-                ? html `<div id="buttonsContainer">
-          ${this.deferredprompt
-                    ? html `<button
+                  ? html`<div id="buttonsContainer">
+          ${
+            this.deferredprompt
+              ? html`<button
                   id="installButton"
                   @click="${() => this.install()}"
                 >
                   ${this.installbuttontext} ${this.manifestdata.short_name}
                 </button>`
-                    : html `<button
+              : html`<button
                   @click="${() => this.cancel()}"
                   id="installCancelButton"
                 >
                   ${this.cancelbuttontext}
-                </button>`}
+                </button>`
+          }
         </div>
         </dialog>`
-                : html `<p id="iosText">${this.iosinstallinfotext}</p>`}
+                  : html`<p id="iosText">${this.iosinstallinfotext}</p>`}
               </div>
             </dialog>
           `
-            : null}
+        : null}
     `;
-    }
+  }
 };
-__decorate([
-    property({ type: String })
-], pwainstall.prototype, "manifestpath", void 0);
-__decorate([
-    property({ type: String })
-], pwainstall.prototype, "iconpath", void 0);
-__decorate([
-    property({ type: Object })
-], pwainstall.prototype, "manifestdata", void 0);
-__decorate([
-    property({ type: Boolean })
-], pwainstall.prototype, "openmodal", void 0);
-__decorate([
-    property({ type: Boolean })
-], pwainstall.prototype, "isSupportingBrowser", void 0);
-__decorate([
-    property({ type: Boolean })
-], pwainstall.prototype, "isIOS", void 0);
-__decorate([
-    property({ type: Boolean })
-], pwainstall.prototype, "installed", void 0);
-__decorate([
-    property({ type: Boolean })
-], pwainstall.prototype, "hasprompt", void 0);
-__decorate([
-    property({ type: Boolean })
-], pwainstall.prototype, "usecustom", void 0);
-__decorate([
-    property({ type: Array })
-], pwainstall.prototype, "relatedApps", void 0);
-__decorate([
-    property({ type: String })
-], pwainstall.prototype, "explainer", void 0);
-__decorate([
-    property({ type: String })
-], pwainstall.prototype, "featuresheader", void 0);
-__decorate([
-    property({ type: String })
-], pwainstall.prototype, "descriptionheader", void 0);
-__decorate([
-    property({ type: String })
-], pwainstall.prototype, "installbuttontext", void 0);
-__decorate([
-    property({ type: String })
-], pwainstall.prototype, "cancelbuttontext", void 0);
-__decorate([
-    property({ type: String })
-], pwainstall.prototype, "iosinstallinfotext", void 0);
-__decorate([
-    property()
-], pwainstall.prototype, "deferredprompt", void 0);
-pwainstall = __decorate([
-    customElement("pwa-install")
-], pwainstall);
+__decorate(
+  [property({ type: String })],
+  pwainstall.prototype,
+  "manifestpath",
+  void 0
+);
+__decorate(
+  [property({ type: String })],
+  pwainstall.prototype,
+  "iconpath",
+  void 0
+);
+__decorate(
+  [property({ type: Object })],
+  pwainstall.prototype,
+  "manifestdata",
+  void 0
+);
+__decorate(
+  [property({ type: Boolean })],
+  pwainstall.prototype,
+  "openmodal",
+  void 0
+);
+__decorate(
+  [property({ type: Boolean })],
+  pwainstall.prototype,
+  "isSupportingBrowser",
+  void 0
+);
+__decorate(
+  [property({ type: Boolean })],
+  pwainstall.prototype,
+  "isIOS",
+  void 0
+);
+__decorate(
+  [property({ type: Boolean })],
+  pwainstall.prototype,
+  "installed",
+  void 0
+);
+__decorate(
+  [property({ type: Boolean })],
+  pwainstall.prototype,
+  "hasprompt",
+  void 0
+);
+__decorate(
+  [property({ type: Boolean })],
+  pwainstall.prototype,
+  "usecustom",
+  void 0
+);
+__decorate(
+  [property({ type: Array })],
+  pwainstall.prototype,
+  "relatedApps",
+  void 0
+);
+__decorate(
+  [property({ type: String })],
+  pwainstall.prototype,
+  "explainer",
+  void 0
+);
+__decorate(
+  [property({ type: String })],
+  pwainstall.prototype,
+  "featuresheader",
+  void 0
+);
+__decorate(
+  [property({ type: String })],
+  pwainstall.prototype,
+  "descriptionheader",
+  void 0
+);
+__decorate(
+  [property({ type: String })],
+  pwainstall.prototype,
+  "installbuttontext",
+  void 0
+);
+__decorate(
+  [property({ type: String })],
+  pwainstall.prototype,
+  "cancelbuttontext",
+  void 0
+);
+__decorate(
+  [property({ type: String })],
+  pwainstall.prototype,
+  "iosinstallinfotext",
+  void 0
+);
+__decorate([property()], pwainstall.prototype, "deferredprompt", void 0);
+pwainstall = __decorate([customElement("pwa-install")], pwainstall);
 export { pwainstall };
