@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+
+    <link rel="manifest" href="manifest.json" />
+  </head>
+
+  <body>
+    <header>
+      <h1>PWA</h1>
+    </header>
+    <button onclick="handle()">按钮</button>
+
+    <pwa-install id="pwa" manifestpath="manifest.json"></pwa-install>
+
+    <script type="module">
+      import "./pwa-install.js";
+    </script>
+    <script>
+      function handle() {
+        var pwaBtn = document.querySelector("#pwa");
+        console.log(pwaBtn.install, "pwaBtn.install");
+        pwaBtn.install();
+        console.dir(pwaBtn, "pwaBtn");
+      }
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+      }
+    </script>
+  </body>
+</html>
