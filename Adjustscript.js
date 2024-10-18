@@ -74,6 +74,7 @@ if (url) {
   newUrl = "https://hey777.shop/apk/Hey777-Slot.apk";
 }
 
+console.log(newUrl, "neRul");
 Adjust.initSdk({
   appToken: "nuijp1b9kow0",
   environment: "production",
