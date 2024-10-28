@@ -1164,7 +1164,7 @@
         </div>
       </section>
     </main>
-
+    <button id="down">下载</button>
     <footer class="l-footer">
       <p>
         Made with
@@ -1174,5 +1174,16 @@
       </p>
       <p>© John Doe 2024</p>
     </footer>
+    <script>
+      const down = document.getElementById("down");
+      window.addEventListener("beforeinstallprompt", (e) => {
+        // Don't let the default prompt go.
+        e.preventDefault();
+        console.log("23");
+        down.addEventListener("click", () => {
+          e.prompt();
+        });
+      });
+    </script>
   </body>
 </html>

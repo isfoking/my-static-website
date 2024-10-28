@@ -28,22 +28,22 @@
   },
   "screenshots": [
     {
-      "src": "./img/assets/a1.webp",
+      "src": "./img/assets/screenshots/a1.webp",
       "type": "image/webp",
       "sizes": "526x296"
     },
     {
-      "src": "./img/assets/a2.webp",
+      "src": "./img/assets/screenshots/a2.webp",
       "type": "image/webp",
       "sizes": "526x296"
     },
     {
-      "src": "./img/assets/a3.webp",
+      "src": "./img/assets/screenshots/a3.webp",
       "type": "image/webp",
       "sizes": "526x296"
     },
     {
-      "src": "./img/assets/a4.webp",
+      "src": "./img/assets/screenshots/a4.webp",
       "type": "image/webp",
       "sizes": "526x296"
     }
