@@ -20,5 +20,32 @@
     }
   ],
   "description": "Best SLOT in Indonesia!",
-  "categories": ["games"]
+  "categories": ["games"],
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "launch_handler": {
+    "client_mode": ["navigate-existing", "auto"]
+  },
+  "screenshots": [
+    {
+      "src": "./assets/a1.webp",
+      "type": "image/webp",
+      "sizes": "526x296"
+    },
+    {
+      "src": "./assets/a2.webp",
+      "type": "image/webp",
+      "sizes": "526x296"
+    },
+    {
+      "src": "./assets/a3.webp",
+      "type": "image/webp",
+      "sizes": "526x296"
+    },
+    {
+      "src": "./assets/a4.webp",
+      "type": "image/webp",
+      "sizes": "526x296"
+    }
+  ]
 }
