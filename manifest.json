@@ -47,5 +47,47 @@
       "type": "image/webp",
       "sizes": "526x296"
     }
+  ],
+  "display_override": ["window-controls-overlay", "standalone", "browser"],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "file_handlers": [
+    {
+      "action": "/open-pdf",
+      "accept": {
+        "application/pdf": [".pdf"]
+      },
+      "icons": [
+        {
+          "src": "pdf-icon.png",
+          "sizes": "256x256",
+          "type": "image/png"
+        }
+      ],
+      "launch_type": "single-client"
+    },
+    {
+      "action": "/show-model",
+      "accept": {
+        "application/sla": ".stl",
+        "application/octet-stream": ".fbx"
+      },
+      "icons": [
+        {
+          "src": "3d-printer-icon.png",
+          "sizes": "256x256",
+          "type": "image/png"
+        }
+      ],
+      "launch_type": "multiple-clients"
+    }
+  ],
+  "handle_links": "preferred",
+  "protocol_handlers": [
+    {
+      "protocol": "web+music",
+      "url": "/play?track=%s"
+    }
   ]
 }
