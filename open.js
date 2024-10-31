@@ -1,28 +1,5 @@
-// (function (doc, win) {
-//   var docEl = doc.documentElement,
-//     resizeEvt = "orientationchange" in window ? "orientationchange" : "resize",
-//     recalc = function () {
-//       var clientWidth = docEl.clientWidth;
-//       if (!clientWidth) return;
-//       if (clientWidth >= 750) {
-//         docEl.style.fontSize = "100px";
-//       } else {
-//         docEl.style.fontSize = 78 * (clientWidth / 750) + "px";
-//       }
-//     };
-
-//   if (!doc.addEventListener) return;
-//   win.addEventListener(resizeEvt, recalc, false);
-//   doc.addEventListener("DOMContentLoaded", recalc, false);
-// })(document, window);
-
-// let info = browser.parse(navigator.userAgent);
-
-// 获取浏览器详细信息 - 指定字段：'browser','system','device','gpu','network','battery','screen','language','timezone'
-
 async function isOpenChrome() {
   const res = await browser.getInfo(["browser"]);
-  alert(res.browser);
   if (
     res.browser === "Chrome" ||
     res.browser === "Edge" ||
@@ -43,3 +20,14 @@ async function open() {
   window.location.href = intentUrl;
 }
 open();
+
+// const isInStandaloneMode = () =>
+//   window.matchMedia("(display-mode: standalone)").matches ||
+//   window.navigator.standalone ||
+//   document.referrer.includes("android-app://");
+
+// if (isInStandaloneMode()) {
+//   alert("当前为pwa模式");
+// } else {
+//   alert("当前不是pwa模式");
+// }

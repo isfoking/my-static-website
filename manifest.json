@@ -28,24 +28,76 @@
   },
   "screenshots": [
     {
-      "src": "./img/assets/screenshots/a1.webp",
-      "type": "image/webp",
-      "sizes": "526x296"
+      "src": "./img/screenshots/a1.png",
+      "type": "image/png",
+      "sizes": "1024x593",
+      "form_factor": "wide"
     },
     {
-      "src": "./img/assets/screenshots/a2.webp",
-      "type": "image/webp",
-      "sizes": "526x296"
+      "src": "./img/screenshots/a2.png",
+      "type": "image/png",
+      "sizes": "1024x593",
+      "form_factor": "wide"
     },
     {
-      "src": "./img/assets/screenshots/a3.webp",
-      "type": "image/webp",
-      "sizes": "526x296"
+      "src": "./img/screenshots/a3.png",
+      "type": "image/png",
+      "sizes": "1024x593",
+      "form_factor": "wide"
     },
     {
-      "src": "./img/assets/screenshots/a4.webp",
-      "type": "image/webp",
-      "sizes": "526x296"
+      "src": "./img/screenshots/a4.png",
+      "type": "image/png",
+      "sizes": "1024x593",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./img/screenshots/a5.png",
+      "type": "image/png",
+      "sizes": "1024x593",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./img/screenshots/a6.png",
+      "type": "image/png",
+      "sizes": "1024x593",
+      "form_factor": "wide"
+    },
+    {
+      "src": "./img/screenshots/m1.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "./img/screenshots/m2.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "./img/screenshots/m3.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "./img/screenshots/m4.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "./img/screenshots/m5.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "./img/screenshots/m6.png",
+      "type": "image/png",
+      "sizes": "540x720",
+      "form_factor": "narrow"
     }
   ],
   "display_override": ["window-controls-overlay", "standalone", "browser"],

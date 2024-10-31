@@ -45,7 +45,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .forceinstall-hdialog-content {
-  position:absolute;top:0.26rem;left:0;width:10rem;background: rgba(34, 34, 34, 1);border-radius: 0.533rem 0.533rem 0 0;
+  position:absolute;top:0.26rem;left:0;background: rgba(34, 34, 34, 1);border-radius: 0.533rem 0.533rem 0 0;
 }
 
 .forceinstall-hdialog-content-title {
@@ -57,11 +57,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .forceinstall-hdialog-content-reward {
-  position:relative;margin-top:0.533rem;left:0.5rem;width:9rem;line-height: .53rem;text-align: left;font-size: .36rem;color: rgba(255, 255, 255, 0.65);
+  position:relative;margin-top:0.533rem;left:0.5rem;line-height: .53rem;text-align: left;font-size: .36rem;color: rgba(255, 255, 255, 0.65);
 }
 
 .forceinstall-hdialog-content-logo {
-  position:relative;margin-top:0.26rem;left:0.5rem;width:9rem;height:1.34rem;line-height: 1.34rem;background: rgba(255, 255, 255, 0.10);border-radius: 0.26rem;
+  position:relative;margin-top:0.26rem;left:0.5rem;height:1.34rem;line-height: 1.34rem;background: rgba(255, 255, 255, 0.10);border-radius: 0.26rem;
 }
 
 .forceinstall-hdialog-content-logo img {
@@ -73,7 +73,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .forceinstall-hdialog-content-install {
-  position:relative;margin-top:0.26rem;left:0.5rem;width:9rem;height:1.1rem;
+  position:relative;margin-top:0.26rem;left:0.5rem;height:1.1rem;
 }
 
 .forceinstall-hdialog-content-install .install-chat {
@@ -93,11 +93,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .forceinstall-hdialog-content-rule {
-  position:relative;margin-top:0.533rem;left:0.5rem;width:9rem;line-height: .45rem;text-align: left;font-size: .28rem;color: rgba(255, 255, 255, 0.65);
+  position:relative;margin-top:0.533rem;left:0.5rem;line-height: .45rem;text-align: left;font-size: .28rem;color: rgba(255, 255, 255, 0.65);
 }
 
 .forceinstall-hdialog-content-tips {
-  position:relative;margin-top:0.533rem;left:0.5rem;width:9rem;height:1.67rem;background: rgba(255, 255, 255, 0.10);border-radius: 0.26rem;
+  position:relative;margin-top:0.533rem;left:0.5rem;height:1.67rem;background: rgba(255, 255, 255, 0.10);border-radius: 0.26rem;
 }
 
 .forceinstall-hdialog-content-tips .tips-img {
@@ -205,7 +205,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #page-promotion .item-frame {
-  position:relative;margin-top:0.5rem;left:0.5rem;width:9rem;border-radius: 0.2rem;
+  position:relative;margin-top:0.5rem;left:0.5rem;border-radius: 0.2rem;
 }
 
 #page-promotion .item-frame  .title {
@@ -286,7 +286,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #page-promotion .today-item-top {
-  position:relative;margin-top:0.7rem;left:0.5rem;width:9rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;display: flex;justify-content: center;align-items: center;
+  position:relative;margin-top:0.7rem;left:0.5rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;display: flex;justify-content: center;align-items: center;
 }
 
 #page-promotion .today-item-top .icon {
@@ -318,7 +318,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #page-promotion .today-item {
-  position:relative;margin-top:1px;left:0.5rem;width:9rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;background: rgba(255,255,255,0.04);
+  position:relative;margin-top:1px;left:0.5rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;background: rgba(255,255,255,0.04);
 }
 
 #page-promotion .today-item-bottom {
@@ -343,7 +343,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #page-promotion .agent-list-top {
-  position:relative;margin-top:0.7rem;left:0.5rem;width:9rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;display: flex;justify-content: center;align-items: center;
+  position:relative;margin-top:0.7rem;left:0.5rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;display: flex;justify-content: center;align-items: center;
 }
 
 #page-promotion .agent-list-top img {
@@ -355,7 +355,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #page-promotion .agent-item-title {
-  position:relative;margin-top:1px;left:0.5rem;width:9rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;background: rgba(255,255,255,0.08);color: rgba(255,255,255,0.85);border-radius: 0.26rem;
+  position:relative;margin-top:1px;left:0.5rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;background: rgba(255,255,255,0.08);color: rgba(255,255,255,0.85);border-radius: 0.26rem;
 }
 
 #page-promotion .agent-item-title .title1 {
@@ -379,11 +379,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #page-promotion .agent-item {
-  position:relative;margin-top:1px;left:0.5rem;width:9rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;background: rgba(255,255,255,0.04);color: rgba(255,255,255,0.65);
+  position:relative;margin-top:1px;left:0.5rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;background: rgba(255,255,255,0.04);color: rgba(255,255,255,0.65);
 }
 
 #page-promotion .agent-item2 {
-  position:relative;margin-top:1px;left:0.5rem;width:9rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;background: rgba(255,255,255,0.08);color: rgba(255,255,255,0.65);
+  position:relative;margin-top:1px;left:0.5rem;height:1.1rem;line-height:1.1rem;font-size:.373rem;background: rgba(255,255,255,0.08);color: rgba(255,255,255,0.65);
 }
 
 #page-promotion .agent-item .left {
@@ -423,7 +423,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .dialog-pay .dialog-frame {
-  position:relative;top:0;left:0;width:10rem;height: 70vh;overflow:hidden;
+  position:relative;top:0;left:0;height: 70vh;overflow:hidden;
 }
 
 .dialog-pay .dialog-frame .content {
@@ -553,7 +553,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top:0.6rem;
   left:0.5rem;
-  width:9rem;
+  
   height:1rem;
   line-height:1rem;
   text-align:center;
@@ -649,7 +649,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 .top-nav-normal {
-  width:10rem;
+  
   height:1.4rem!important;
   line-height:1.4rem!important;
   background: #111111!important;
@@ -657,7 +657,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .top-nav-wheel {
-  width:10rem;
+  
   height:1.4rem!important;
   line-height:1.4rem!important;
   background: #111111!important;
@@ -766,7 +766,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .agent-tips-container {
   position:relative;
-  width:10rem;
+  
   overflow-x: hidden;
   overflow-y: scroll;
   background: black;
@@ -779,7 +779,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .agent-tips-topbg img{
   position:relative;
-  width:10rem;
+  
 }
 
 .commission-table {
@@ -800,7 +800,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top: 2px;
   margin-left: 0.5rem;
-  width:9rem;
+  
   height:1rem;
   line-height: 1rem;
   background: rgba(255,255,255,0.08);
@@ -972,7 +972,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top:0.5rem;
   left:0.5rem;
-  width:9rem;
+  
   border-radius: 0.533rem;
   height: 2.5rem;
 }
@@ -980,7 +980,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .top-card-bg {
   position:absolute;
   top:0;
-  width:9rem;
+  
   height:2.8rem;
   left:0;
 }
@@ -1170,7 +1170,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top:0.5rem;
   left:0.5rem;
-  width:9rem;
+  
   border-radius: 0.533rem;
   height: 1.8rem;
   overflow: hidden;
@@ -1179,7 +1179,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .ltop-card-bg {
   position:absolute;
   top:0;
-  width:9rem;
+  
   height:2.8rem;
   left:0;
 }
@@ -1347,7 +1347,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:absolute;
   bottom:-0.4rem;
   left:0;
-  width:9rem;
+  
   height: 1px;
   background: rgba(255,255,255,0);
 }
@@ -1472,7 +1472,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:absolute;
   top:2.5rem;
   left:0.55rem;
-  width:9rem;
+  
   font-size:.533rem;
   text-align:center;
   word-break: break-all;
@@ -1602,7 +1602,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .lottery-bottom-frame {
-  position:relative;margin-top:-1.3rem;left:0;width:10rem;height:5.8rem;backdrop-filter: blur(50px);-webkit-backdrop-filter: blur(50px);
+  position:relative;margin-top:-1.3rem;left:0;height:5.8rem;backdrop-filter: blur(50px);-webkit-backdrop-filter: blur(50px);
 }
 
 .lottery-bottom-cardnum {
@@ -1616,7 +1616,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .lottery-bottom-tips {
-  position:absolute;top:2.5rem;width:10rem;height:0.8rem;line-height:0.8rem;color: #78340F;font-size:.346rem;text-align:center;
+  position:absolute;top:2.5rem;height:0.8rem;line-height:0.8rem;color: #78340F;font-size:.346rem;text-align:center;
 }
 
 .lottery-redeem-enable {
@@ -1698,7 +1698,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   top:0;
   left:0;
-  width:10rem;
+  
   max-height:90vh;
   overflow:scroll;
 }
@@ -1824,7 +1824,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .lottery-result-title {
   position:absolute;
   top:0;
-  width:10rem;
+  
   height:2rem;
   line-height: 2rem;
   text-align: center;
@@ -2001,7 +2001,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .message-item .line {
   position: relative;
   left:0.5rem;
-  width:9rem;
+  
   height: 0.4rem;
   border-bottom: 1px solid rgba(255,255,255,0.15);
 }
@@ -2038,7 +2038,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .profile-title-normal {
   position:relative;
   left:0.8rem;
-  width:9rem;
+  
   font-size:.373rem;
   color: rgba(255,255,255,0.45);
 }
@@ -2389,7 +2389,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .profile-logout-frame {
   position:fixed;
   top:0;
-  width:10rem;
+  
   height:2000px;
   z-index:9999;
 }
@@ -2507,7 +2507,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .nickname-dialog-value {
   margin-top:0.2rem;
   margin-left:0.5rem;
-  width:9rem;
+  
   height:1.18rem;
   line-height: 1.18rem;
   border-radius:0.26rem;
@@ -2609,11 +2609,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top:0.5rem;
   left:0.5rem;
-  width:9rem;
+  
 }
 
 .bdep-item-frame .bg {
-  position:absolute;top:0;left:0;width:9rem;
+  position:absolute;top:0;left:0;
 }
 
 .bdep-item-frame .icon {
@@ -2890,7 +2890,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .sdback-link-container .title .user-link {
   position: relative;
   left:0;
-  width:9rem;
+  
   text-align: center;
   font-size: .373rem;
   color: rgba(255,255,255,0.85);
@@ -2974,7 +2974,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .sdback-clients-container {
-  position:relative;margin-top:0.5rem;left:0.5rem;width:9rem;height:3.2rem;border-radius: .533rem;background: linear-gradient(89deg, #E5C477 0.68%, #FAF1DC 98.8%);
+  position:relative;margin-top:0.5rem;left:0.5rem;height:3.2rem;border-radius: .533rem;background: linear-gradient(89deg, #E5C477 0.68%, #FAF1DC 98.8%);
 }
 
 .sdback-clients-container .client-bg {
@@ -3290,11 +3290,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 .exchange-top-bg {
-  position:absolute;top:1.2rem;left:0;width:10rem;height:7.5rem;background-image: linear-gradient(180deg, #F9C486 0%, rgba(252,215,161,0.50) 47%, rgba(254,252,225,0.00) 100%);
+  position:absolute;top:1.2rem;left:0;height:7.5rem;background-image: linear-gradient(180deg, #F9C486 0%, rgba(252,215,161,0.50) 47%, rgba(254,252,225,0.00) 100%);
 }
 
 .exchange-input-frame {
-  position:relative;margin-top:0.32rem;left:0rem;width:10rem;
+  position:relative;margin-top:0.32rem;left:0rem;
 }
 
 .exchange-input-frame .top-icon {
@@ -3318,14 +3318,14 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .exchange-input-frame .top-title { 
-  position:absolute;top:3rem;left:0rem;width:9rem;font-size: .533rem;font-weight: bold;color: rgba(0,0,0,0.85);text-align: center;
+  position:absolute;top:3rem;left:0rem;font-size: .533rem;font-weight: bold;color: rgba(0,0,0,0.85);text-align: center;
 }
 
 .exchange-input-frame .ecopy-frame {
   position:relative;
   margin-top:0.5rem;
   left: 0.5rem;
-  width:9rem;
+  
   height:1rem;
 }
 
@@ -3418,7 +3418,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .exchange-input-frame .bottom-ebg { 
-  position:absolute;bottom: 0;width:9rem;height:6.75rem;
+  position:absolute;bottom: 0;height:6.75rem;
 }
 
 .exchange-input-recode {
@@ -3536,7 +3536,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 .gift-top-space {
-  position:relative;height:0.6rem;width:10rem;
+  position:relative;height:0.6rem;
 }
 
 .gift-top-title {
@@ -3548,7 +3548,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .gift-top-title .line-bg {
-  position:absolute;top:0;left:0.5rem;width:9rem;height:3rem;line-height:0.72rem;overflow: hidden;border-radius: 0.2rem;overflow: hidden;background: rgba(255,255,255,0.04);
+  position:absolute;top:0;left:0.5rem;height:3rem;line-height:0.72rem;overflow: hidden;border-radius: 0.2rem;overflow: hidden;background: rgba(255,255,255,0.04);
 }
 
 .gift-top-title .line-bg img { 
@@ -3556,7 +3556,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .gift-top-title .content-eframe {
-  position:absolute;top:0;left:0.5rem;width:9rem;height:3rem;line-height:0.72rem;text-align:left;font-size:.6rem;display: flex;justify-content: center;align-content: center;align-items: center;color: rgba(255, 255, 255, 0.85);
+  position:absolute;top:0;left:0.5rem;height:3rem;line-height:0.72rem;text-align:left;font-size:.6rem;display: flex;justify-content: center;align-content: center;align-items: center;color: rgba(255, 255, 255, 0.85);
 }
 
 .gift-top-title .content-eframe img {
@@ -3564,15 +3564,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .gift-item-frame {
-  position:relative;width:10rem;height:3.8rem;
+  position:relative;height:3.8rem;
 }
 
 .gift-item-frame .item-bg {
-  position:absolute;top:0.3rem;left:0.5rem;width:9rem;height:3.5rem;
+  position:absolute;top:0.3rem;left:0.5rem;height:3.5rem;
 }
 
 .gift-item-frame .item-top {
-  position:absolute;width:9rem;left:0.5rem;top:0.3rem;height:1.34rem;line-height: 1.34rem;font-size:.373rem;
+  position:absolute;left:0.5rem;top:0.3rem;height:1.34rem;line-height: 1.34rem;font-size:.373rem;
 }
 
 .gift-item-frame .item-top-lefticon {
@@ -3622,7 +3622,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .gift-item-frame .gitem-desc {
-  position:absolute;width:9rem;left:0.5rem;top:1.65rem;height:2.2rem;font-size:.373rem;
+  position:absolute;left:0.5rem;top:1.65rem;height:2.2rem;font-size:.373rem;
 }
 
 .gift-item-frame .gitem-desc .gdesc {
@@ -3663,7 +3663,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top:0.5rem;
   left:0.5rem;
-  width:9rem;
+  
   border-radius: 0.64rem;
   height:4.5rem;
   /* background: rgba(255,255,255,0.04); */
@@ -3672,7 +3672,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .level-top-card .level-line-bg {
-  position:absolute;top:0;left:0;width:9rem;opacity: 0.2;
+  position:absolute;top:0;left:0;opacity: 0.2;
 }
 
 .level-top-card .level-curlevel {
@@ -3714,7 +3714,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top:0.5rem;
   left:0.5rem;
-  width:9rem;
+  
   border-radius: 0.2rem;
   height: 3.4rem;
   overflow-x: scroll;
@@ -3816,7 +3816,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .level-tips-frame {
   position:relative;
   left:0.5rem;
-  width:9rem;
+  
   background: rgba(255,255,255,0.04);
   height: 1.7rem;
   overflow: hidden;
@@ -4222,7 +4222,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .rescue-tips-frame {
   position:relative;
   left:0.5rem;
-  width:9rem;
+  
   background: rgba(255,255,255,0.04);
   height: 1.7rem;
   overflow: hidden;
@@ -4247,7 +4247,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top: 0.5px;
   margin-left: 0.5rem;
-  width:9rem;
+  
   height:1rem;
   line-height: 1rem;
   background: rgba(255,255,255,0.04);
@@ -5006,7 +5006,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 .weekb-top-card {
-  position:relative;width:10rem;height:7rem;
+  position:relative;height:7rem;
 }
 
 .weekb-top-card .top-bg {
@@ -5014,7 +5014,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .weekb-top-card .top-time-frame {
-  position:absolute;top:5.5rem;left:0.5rem;width:9rem;font-size: .32rem;display: flex;align-items: center;justify-content: center;
+  position:absolute;top:5.5rem;left:0.5rem;font-size: .32rem;display: flex;align-items: center;justify-content: center;
 }
 
 .weekb-top-card .top-time-frame-content {
@@ -5034,7 +5034,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .weekb-content-frame {
-  position:relative;margin-top:0rem;left:0.5rem;width:9rem;border-radius: 0.533rem;border: 0.5px solid rgba(255, 255, 255, 0.30);background:rgba(255, 255, 255, 0.04);backdrop-filter: blur(15px);-webkit-backdrop-filter: blur(15px);
+  position:relative;margin-top:0rem;left:0.5rem;border-radius: 0.533rem;border: 0.5px solid rgba(255, 255, 255, 0.30);background:rgba(255, 255, 255, 0.04);backdrop-filter: blur(15px);-webkit-backdrop-filter: blur(15px);
 }
 
 .weekb-content-frame .wbg-top {
@@ -5046,7 +5046,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .weekb-content-frame .wframe-top {
-  position:relative;top:0;left:0;width:9rem;height:1rem;line-height: 1rem;
+  position:relative;top:0;left:0;height:1rem;line-height: 1rem;
 }
 
 .weekb-content-frame .wframe-top-icon {
@@ -5070,7 +5070,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .weekb-content-frame .wframe-toploss {
-  position:relative;top:-0.2rem;left:0;width:9rem;height:1rem;line-height: 1rem;display: flex;justify-content: center;align-items: center;
+  position:relative;top:-0.2rem;left:0;height:1rem;line-height: 1rem;display: flex;justify-content: center;align-items: center;
 }
 
 .weekb-content-frame .wframe-toploss-icon {
@@ -5106,7 +5106,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .weekb-content-frame .wtime-frame {
-  position:relative;margin-top:0.3rem;left:0;width:9rem;color: rgba(255,255,255,0.85);font-size: .346rem;text-align:center;font-weight: bold;display: flex;justify-content: center;align-items: center;
+  position:relative;margin-top:0.3rem;left:0;color: rgba(255,255,255,0.85);font-size: .346rem;text-align:center;font-weight: bold;display: flex;justify-content: center;align-items: center;
 }
 
 .weekb-content-frame .wtime-frame-clock {
@@ -5114,11 +5114,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .weekb-content-frame .wfun-title {
-  position:relative;margin-top:0.533rem;left:0;width:9rem;color: rgba(255,255,255,0.65);font-size: .373rem;text-align:center;
+  position:relative;margin-top:0.533rem;left:0;color: rgba(255,255,255,0.65);font-size: .373rem;text-align:center;
 }
 
 .weekb-content-frame .wfun-value {
-  position:relative;margin-top:0.26rem;left:0;width:9rem;height:1rem;line-height: 1rem;text-align: center;
+  position:relative;margin-top:0.26rem;left:0;height:1rem;line-height: 1rem;text-align: center;
 }
 
 .weekb-content-frame .wfun-value-text1 {
@@ -5160,7 +5160,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .weekb-item-title {
   position:relative;
   left:0;
-  width:9rem;
+  
   line-height:1.06rem;
   font-size:.373rem;
   color: rgba(255,255,255,0.45);
@@ -5188,7 +5188,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 .weekb-item-frame {
   position:relative;
   left:0;
-  width:9rem;
+  
   height:1rem;
   line-height:1rem;
   font-size:.373rem;
@@ -5251,7 +5251,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .signup-top-frame span {
-  position:absolute;top:2.5rem;left:0.5rem;width:9rem;font-size:.533rem;text-align:center;word-break: break-all;color: rgba(255,255,255,1);
+  position:absolute;top:2.5rem;left:0.5rem;font-size:.533rem;text-align:center;word-break: break-all;color: rgba(255,255,255,1);
 }
 
 .signup-item {
@@ -5407,15 +5407,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .topup-top-title-banner {
-  border-radius: 0.2rem;margin-top: 0.6rem;left:0.5rem;width:9rem;height:1.73rem;
+  border-radius: 0.2rem;margin-top: 0.6rem;left:0.5rem;height:1.73rem;
 }
 
 .topup-top-banner-img {
-  width:9rem;height:1.73rem;border-radius: 0.533rem;object-fit: cover;
+  height:1.73rem;border-radius: 0.533rem;object-fit: cover;
 }
 
 .topup-top-tips {
-  position:absolute;top:0;left:0.5rem;width:9rem;height:1.3rem;line-height:1.3rem;font-size:.373rem;display: flex;justify-content: flex-start;align-items: center;color: rgba(255, 255, 255, 0.5);border-radius:0.22rem;
+  position:absolute;top:0;left:0.5rem;height:1.3rem;line-height:1.3rem;font-size:.373rem;display: flex;justify-content: flex-start;align-items: center;color: rgba(255, 255, 255, 0.5);border-radius:0.22rem;
 }
 
 .topup-top-tips-icon {
@@ -5614,11 +5614,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .topup-bouns-card {
-  position:relative;width:10rem;height:3.75rem;
+  position:relative;height:3.75rem;
 }
 
 .topup-bouns-card .topup-bouns-content {
-  position:absolute;width:9rem;left:0.5rem;top:0.6rem;height:3.15rem;
+  position:absolute;left:0.5rem;top:0.6rem;height:3.15rem;
 }
 
 .topup-bouns-card .topup-bouns-content .tcard-bg {
@@ -5626,7 +5626,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .topup-bouns-card .topup-bouns-content .tcard-top {
-  position:absolute;top:0;left:0;width:9rem;height:2.45rem;display: flex;box-align:center;justify-content: center;align-content: center;align-items:center;text-align:center;
+  position:absolute;top:0;left:0;height:2.45rem;display: flex;box-align:center;justify-content: center;align-content: center;align-items:center;text-align:center;
 }
 
 .topup-bouns-card .topup-bouns-content .tcard-top-span1 {
@@ -5638,7 +5638,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .topup-bouns-card .topup-bouns-content .tcard-bottom {
-  position:absolute;left:0;bottom:0;width:9rem;height:0.7rem;line-height:0.7rem;font-size:.32rem;
+  position:absolute;left:0;bottom:0;height:0.7rem;line-height:0.7rem;font-size:.32rem;
 }
 
 .topup-bouns-card .topup-bouns-content .tcard-bottom-text1 {
@@ -5680,7 +5680,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .tuprofile-top-card .tupbg {
-  position:absolute;top:0;left:0.5rem;width:9rem;height:3rem;line-height:0.72rem;overflow: hidden;border-radius: 0.2rem;overflow: hidden;
+  position:absolute;top:0;left:0.5rem;height:3rem;line-height:0.72rem;overflow: hidden;border-radius: 0.2rem;overflow: hidden;
 }
 
 .tuprofile-top-card .tupbg img {
@@ -5688,7 +5688,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .tuprofile-top-card .tup-top {
-  position:absolute;top:0;left:0.5rem;width:9rem;height:1rem;line-height:1rem;text-align:left;font-size:.6rem;
+  position:absolute;top:0;left:0.5rem;height:1rem;line-height:1rem;text-align:left;font-size:.6rem;
 }
 
 .tuprofile-top-card .tup-top-img {
@@ -5700,7 +5700,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .tuprofile-top-card .tup-bottom {
-  position:absolute;top:1rem;left: 0.5rem;width:9rem;height:1.7rem;text-align:left;font-size:.6rem;text-align: center;display: flex;justify-content: center;align-content: center;align-items: center;color: #FFFFFF;
+  position:absolute;top:1rem;left: 0.5rem;height:1.7rem;text-align:left;font-size:.6rem;text-align: center;display: flex;justify-content: center;align-content: center;align-items: center;color: #FFFFFF;
 }
 
 .tuprofile-top-card .tup-bottom-unit {
@@ -5898,7 +5898,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top:1px;
   left:0.5rem;
-  width:9rem;
+  
   height:1.1rem;
   line-height:1.1rem;
   font-size:.373rem;
@@ -5948,7 +5948,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top:1px;
   left:0.5rem;
-  width:9rem;
+  
   height:1.1rem;
   line-height:1.1rem;
   font-size:.373rem;
@@ -6244,7 +6244,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:relative;
   margin-top:0.8rem;
   left:0;
-  width:10rem;
+  
   border-radius: 0.8rem 0.8rem 0px 0px;
   border: 0.5px solid rgba(255, 255, 255, 0.10);
   background: rgba(255, 255, 255, 0.04);
@@ -6254,7 +6254,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .withpf-profile {
   position:relative;
-  width:9rem;
+  
   left:50%;
   margin-left:-4.5rem;
   margin-top: 0.3rem;
@@ -6270,7 +6270,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .withpf-profile-item {
   position:relative;
-  width:9rem;
+  
   height:1.3rem;
   line-height: 1.3rem;
   left:50%;
@@ -6336,7 +6336,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   color:#EB5757;
   text-align: left;
   border-radius: 0.1rem;
-  width:9rem;
+  
   left:50%;
   margin-left:-4.5rem;
   z-index: 99;
@@ -6491,7 +6491,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:absolute;
   top:0;
   left:0;
-  width:10rem;
+  
   height:1.21rem;
   line-height:1.2rem;
   z-index:1000;
@@ -6551,7 +6551,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .app-name {
-  position:absolute;top:0;left:0;width:10rem;height:1.4rem;line-height:1.4rem;z-index:1000;overflow: hidden;background: transparent;
+  position:absolute;top:0;left:0;height:1.4rem;line-height:1.4rem;z-index:1000;overflow: hidden;background: transparent;
 }
 
 #home .app-name .app-name-leftbg {
@@ -6669,7 +6669,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .popmore-frame .back-frame .frame-title {
-  position:absolute;top:0;left:0;width:10rem;height:1.4rem;line-height: 1.4rem;color: #FFFFFF;font-size: 0.426rem;text-align: center;font-weight: 700;
+  position:absolute;top:0;left:0;height:1.4rem;line-height: 1.4rem;color: #FFFFFF;font-size: 0.426rem;text-align: center;font-weight: 700;
 }
 
 /* #home .popmore-frame .gmenu-menu-title {
@@ -7059,16 +7059,16 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 #home .top-banner-frame {
-  position:relative;left:0.5rem;width:9rem;height:3.15rem;border-radius: 0.26rem;overflow: hidden;
+  position:relative;left:0.5rem;height:3.15rem;border-radius: 0.26rem;overflow: hidden;
 }
 
 #home .top-banner-frame-img {
-  width:9rem;height:3.15rem;border-radius: 0.26rem;object-fit: cover;
+  height:3.15rem;border-radius: 0.26rem;object-fit: cover;
 }
 
 
 #home .top-libanner-frame  {
-  position:relative;margin-top:0.16rem;left:0.5rem;width:9rem;height:1.32rem;border-radius: 0.22rem;overflow: hidden;
+  position:relative;margin-top:0.16rem;left:0.5rem;height:1.32rem;border-radius: 0.22rem;overflow: hidden;
 }
 
 #home .top-libanner-frame  .libanner1 {
@@ -7235,7 +7235,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .ggame-loadmore-frame {
-  width:10rem;position:relative;height:1rem;background: transparent;
+  position:relative;height:1rem;background: transparent;
 }
 
 #home .ggame-loadmore-frame-bg {
@@ -7255,19 +7255,19 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .sdpromotion-frame-type1 {
-  position:relative;font-size:.4rem;text-align:center;width:10rem;background: rgba(255,255,255,0.04);padding-top: 0.2rem;padding-bottom:0.2rem;
+  position:relative;font-size:.4rem;text-align:center;background: rgba(255,255,255,0.04);padding-top: 0.2rem;padding-bottom:0.2rem;
 }
 
 #home .sdpromotion-frame-type2 {
-  position:relative;font-size:.4rem;text-align:center;width:10rem;background: transparent;
+  position:relative;font-size:.4rem;text-align:center;background: transparent;
 }
 
 #home .sdpromotion-frame-type3 {
-  position:relative;font-size:.4rem;text-align:center;width:10rem;background: transparent;padding-top: 0.45rem;
+  position:relative;font-size:.4rem;text-align:center;background: transparent;padding-top: 0.45rem;
 }
 
 #home .sdpromotion-frame-type4 {
-  position:relative;font-size:.4rem;text-align:center;width:10rem;background: transparent;padding-bottom:0.45rem;
+  position:relative;font-size:.4rem;text-align:center;background: transparent;padding-bottom:0.45rem;
 }
 
 #home .sdpromotion-content {
@@ -7306,7 +7306,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .sdpromotion-desc-content {
-  position:relative;font-size:.4rem;text-align:center;width:10rem;padding-top: 0.6rem;padding-bottom:0.45rem;border-top: 1px solid rgba(255,255,255,0);background: transparent;
+  position:relative;font-size:.4rem;text-align:center;padding-top: 0.6rem;padding-bottom:0.45rem;border-top: 1px solid rgba(255,255,255,0);background: transparent;
 }
 
 #home .sdpromotion-desc-content-name {
@@ -7314,7 +7314,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .sdpromotion-desc-content-text {
-  width:9rem;margin-top:0.3rem;margin-left:0.5rem;font-size:12px;text-align:center;line-height:20px;color: rgba(255,255,255,0.45);text-align:left;white-space: pre-wrap;
+  margin-top:0.3rem;margin-left:0.5rem;font-size:12px;text-align:center;line-height:20px;color: rgba(255,255,255,0.45);text-align:left;white-space: pre-wrap;
 }
 
 #home .sdpromotion-desc-content-tips {
@@ -7322,7 +7322,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .sdpromotion-desc-content-version {
-  width:10rem;left:0.2rem;text-align:center;font-size:.3rem;color: rgba(255,255,255,0.25);z-index: 1001;
+  left:0.2rem;text-align:center;font-size:.3rem;color: rgba(255,255,255,0.25);z-index: 1001;
 }
 
 #home .sdpromotion-desc-content-line {
@@ -7330,7 +7330,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .more-menu-tab {
-  position:absolute;top:1.7rem;width:10rem;height:1.12rem;line-height:1.12rem;font-size:.373rem;
+  position:absolute;top:1.7rem;height:1.12rem;line-height:1.12rem;font-size:.373rem;
 }
 
 #home .more-menu-tab .more-menu-item-disable {
@@ -7378,7 +7378,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .hdialog-noty-content {
-  height:15rem;width:9rem;margin-left: 0.5rem;
+  height:15rem;margin-left: 0.5rem;
 }
 
 #home .hdialog-noty-content-icon {
@@ -7390,7 +7390,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .hdialog-noty-content-title {
-  position: relative;margin-top: -0.5rem;height: 1.2rem;width:9rem;color: #FFFFFF;text-align: center;font-size: .426rem;
+  position: relative;margin-top: -0.5rem;height: 1.2rem;color: #FFFFFF;text-align: center;font-size: .426rem;
 }
 
 #home .hdialog-noty-content-text {
@@ -7410,7 +7410,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .hdialog-loginalert-content {
-  height:12rem;width:9rem;margin-left:0.5rem;
+  height:12rem;margin-left:0.5rem;
 }
 
 #home .hdialog-loginalert-text {
@@ -7442,11 +7442,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .hdialog-cslist-content {
-  position:relative;top:0;left:0;width:10rem;max-height:80vh;overflow:scroll;
+  position:relative;top:0;left:0;max-height:80vh;overflow:scroll;
 }
 
 #home .hdialog-cslist-content-item {
-  position:relative;left:0.5rem;width:9rem;height:1.7rem;background: rgba(255, 255, 255, 0.08);border-radius: 0.533rem;margin-bottom:0.266rem;
+  position:relative;left:0.5rem;height:1.7rem;background: rgba(255, 255, 255, 0.08);border-radius: 0.533rem;margin-bottom:0.266rem;
 }
 
 #home .hdialog-cslist-content-user {
@@ -7526,7 +7526,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .hdialog-activity-content {
-  position:relative;top:0.2rem;left:0;width:10rem;max-height:100vh;overflow:scroll;
+  position:relative;top:0.2rem;left:0;max-height:100vh;overflow:scroll;
 }
 
 #home .hdialog-freereg-close {
@@ -7546,11 +7546,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 #home .hdialog-freereg-content {
-  position:absolute;top:2.8rem;width:10rem;height:12.22rem;
+  position:absolute;top:2.8rem;height:12.22rem;
 }
 
 #home .hdialog-freereg-content-img1 {
-  position:absolute;top:0;left:0;width:10rem;
+  position:absolute;top:0;left:0;
 }
 
 #home .hdialog-freereg-content-img2 {
@@ -8172,7 +8172,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .pop-gift-item .git-fun-item {
-  position:absolute;top:0;left:0.5rem;width:9rem;height:4.72rem;background: rgba(255, 255, 255, 0.10);border-radius: 0.533rem;overflow: hidden;
+  position:absolute;top:0;left:0.5rem;height:4.72rem;background: rgba(255, 255, 255, 0.10);border-radius: 0.533rem;overflow: hidden;
 }
 
 .pop-gift-item .git-fun-item .left{
@@ -8213,7 +8213,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .pop-gift-item .git-fun-item .right {
-  position:absolute;right:0;top:0;width:9rem;height:3.411rem;
+  position:absolute;right:0;top:0;height:3.411rem;
 }
 
 .pop-gift-item .git-fun-item img {
@@ -8532,7 +8532,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 .sdticket-bg {
-  position:absolute;top:0;left:0;width:10rem;  
+  position:absolute;top:0;left:0;  
 }
 
 .sdticket-top-frame {
@@ -8548,7 +8548,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:absolute;
   top:0;
   left:0;
-  width:10rem;
+  
   height:10rem;
 }
 
@@ -8556,7 +8556,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:absolute;
   top:0;
   left:0;
-  width:10rem;
+  
   height:10rem;
 }
 
@@ -8581,7 +8581,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position:absolute;
   top:6rem;
   left:0;
-  width:10rem;
+  
   height: 9rem;
 }
 .sdticket-bottom-jackpot-bg {
@@ -8830,7 +8830,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .sdticket-tickets-header-img1 {
-  position:absolute;top:0.6rem;left:50%;width:9rem;margin-left:-4.5rem;
+  position:absolute;top:0.6rem;left:50%;margin-left:-4.5rem;
 }
 
 .sdticket-tickets-header-img2 {
@@ -8977,7 +8977,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .sdticket-tickets-body {
-  position: relative;left: 0.9rem;width:9rem;display: flex;flex-wrap: wrap;z-index: 10;
+  position: relative;left: 0.9rem;display: flex;flex-wrap: wrap;z-index: 10;
 }
 
 .sdticket-tickets-body-item {
@@ -9096,7 +9096,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .sdticket-tickets-footer img {
-  position:absolute;top:-1rem;left:50%;width:9rem;margin-left:-4.5rem;
+  position:absolute;top:-1rem;left:50%;margin-left:-4.5rem;
 }
 
 
@@ -9109,7 +9109,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hdialog-betlist-content {
-  position:relative;top:0;left:0;width:10rem;max-height:80vh;overflow:scroll;
+  position:relative;top:0;left:0;max-height:80vh;overflow:scroll;
 }
 
 .hdialog-betlist-content-title {
@@ -9138,11 +9138,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hdialog-betlist-content-item {
-  position:relative;left:0.5rem;width:9rem;height:1.34rem;line-height: 1.34rem;font-size: .373rem;color: rgba(255,255,255,0.85);background: rgba(255,255,255,0.08);box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.15);
+  position:relative;left:0.5rem;height:1.34rem;line-height: 1.34rem;font-size: .373rem;color: rgba(255,255,255,0.85);background: rgba(255,255,255,0.08);box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.15);
 }
 
 .hdialog-betlist-content-item1 {
-  position:relative;left:0.5rem;width:9rem;height:1.34rem;line-height: 1.34rem;font-size: .373rem;color: rgba(255,255,255,0.85);background: rgba(255,255,255,0.04);box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.15);
+  position:relative;left:0.5rem;height:1.34rem;line-height: 1.34rem;font-size: .373rem;color: rgba(255,255,255,0.85);background: rgba(255,255,255,0.04);box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.15);
 }
 
 .hdialog-betlist-content-item2 {
@@ -9176,11 +9176,11 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hdialog-exchange-content-bg {
-  position:absolute;top:0;width:10rem;height:10rem;left:0;
+  position:absolute;top:0;height:10rem;left:0;
 }
 
 .hdialog-exchange-content-title {
-  position:absolute;top:0.9rem;left:0.5rem;width:9rem;height:1.3rem;line-height: 1.3rem;text-align: center;font-size: .64rem;color:#A400FF;font-weight: bold;text-shadow: 5px 5px 4px rgba(0,0,0,0.25);
+  position:absolute;top:0.9rem;left:0.5rem;height:1.3rem;line-height: 1.3rem;text-align: center;font-size: .64rem;color:#A400FF;font-weight: bold;text-shadow: 5px 5px 4px rgba(0,0,0,0.25);
 }
 
 .hdialog-exchange-content-title img {
@@ -9188,7 +9188,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hdialog-exchange-content-top {
-  position:absolute;top:2rem;left:0.5rem;width:9rem;height: 5rem;
+  position:absolute;top:2rem;left:0.5rem;height: 5rem;
 }
 
 .hdialog-exchange-content-top-frame1 {
@@ -9296,7 +9296,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .hdialog-exchange-content-bottom {
-  position:absolute;top:8.4rem;left:0.5rem;width:9rem;height: 1rem;
+  position:absolute;top:8.4rem;left:0.5rem;height: 1rem;
 }
 
 .hdialog-exchange-content-bottom-left {
@@ -9465,7 +9465,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 .sdhome-jackpot-frame {
   position:relative;
-  width:9rem;
+  
   height: 6rem;
 }
 
@@ -9477,8 +9477,8 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .sdhome-jackpot-frame span { 
-  /* position:absolute;top:1.4rem;left:0;width:9rem;height:2rem;line-height:2rem;text-align: center;color: #F9C486;text-shadow: 0 3px 0 #610097;font-size: 0.853rem; */
-  position:absolute;top:4.2rem;left:0;width:9rem;height:2rem;line-height:2rem;text-align: center;font-size: 0.88rem;
+  /* position:absolute;top:1.4rem;left:0;height:2rem;line-height:2rem;text-align: center;color: #F9C486;text-shadow: 0 3px 0 #610097;font-size: 0.853rem; */
+  position:absolute;top:4.2rem;left:0;height:2rem;line-height:2rem;text-align: center;font-size: 0.88rem;
   color: #FFEDE0;
   font-weight: bold;
   text-shadow: 5px 5px 4px #610097;
@@ -11728,23 +11728,23 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 
 
 .supermember-page-frame {
-  position:relative;left:0rem;width:10rem;
+  position:relative;left:0rem;
 }
 
 .supermember-page-frame .top-icon {
-  position:relative;margin-top:0.2rem;left:0.5rem;width:9rem;height:4.5rem;
+  position:relative;margin-top:0.2rem;left:0.5rem;height:4.5rem;
 }
 
 .supermember-page-frame .top-icon img {
-  position:absolute;top:0;left:0;width:9rem;height: auto;
+  position:absolute;top:0;left:0;height: auto;
 }
 
 .supermember-page-frame .top-day {
-  position:relative;margin-top:-1.1rem;left:0.5rem;width:9rem;height:4.5rem;z-index: 2;
+  position:relative;margin-top:-1.1rem;left:0.5rem;height:4.5rem;z-index: 2;
 }
 
 .supermember-page-frame .top-day-bg {
-  position:absolute;top:0;left:0;width:9rem;
+  position:absolute;top:0;left:0;
 }
 
 .supermember-page-frame .top-day .day1 {
@@ -11934,15 +11934,15 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
 }
 
 .supermember-page-frame .slot-frame {
-  position:relative;margin-top:-1.3rem;left:0;width:10rem;height:12.05rem;
+  position:relative;margin-top:-1.3rem;left:0;height:12.05rem;
 }
 
 .supermember-page-frame .slot-frame-bg {
-  position:absolute;top:0;left:0;width:10rem;
+  position:absolute;top:0;left:0;
 }
 
 .supermember-page-frame .slot-frame-light {
-  position:absolute;top:0;left:0;width:10rem;
+  position:absolute;top:0;left:0;
 }
 
 
@@ -13122,7 +13122,7 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   position: absolute;
   top:1.326rem;
   left:0;
-  width:10rem;
+  
 }
 
 

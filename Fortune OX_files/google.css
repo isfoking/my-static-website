@@ -589,9 +589,9 @@
 
 .JU1wdd {
     height: 64px;
-    margin: 16px 0 24px -24px;
-    padding: 12px 0;
-    width: 10rem
+
+    padding: 24px 0;
+
 }
 
 .w7Iutd {
@@ -599,9 +599,7 @@
     display: flex
 }
 
-.w7Iutd>:first-child:last-child~.wVqUob,.w7Iutd>:first-child:nth-last-child(2)~.wVqUob,.w7Iutd>:first-child:nth-last-child(3)~.wVqUob {
-    padding: 0 24px
-}
+
 
 .wVqUob {
     padding: 0 16px;
@@ -807,7 +805,7 @@
 .l8YSdd {
     align-items: center;
     display: flex;
-    overflow: auto;
+    justify-content: center;
     width: 100%
 }
 
@@ -1596,7 +1594,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     position: absolute;
     top: 0;
     left: 0;
-    width: 10rem;
+    width: 100%;
     height: 100vh;
     background: white;
 }
@@ -2330,21 +2328,28 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 }
 
 .google-install-app {
-    margin-left: 0.67rem;
+    margin: 0 auto;
     width: 8.66rem;
     height: 1rem;
     line-height: 1rem;
     border-radius: 0.22rem;
-    background-color: rgb(1, 135, 95);
+
+    border: 1px solid rgb(1, 135, 95);
     text-align: center;
     color: white;
     font-size: 0.373rem;
+    position: relative;
 }
 
 .google-install-app:active {
     opacity: 0.65;
 }
-
+.google-install-app > button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
 .OahvPe:active {
     opacity: 0.65;
 }
@@ -2355,4 +2360,22 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 
 .kofMvc:active {
     opacity: 0.65;
+}
+#mask {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3)
+}
+#mask >img {
+    position: fixed;
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 2rem;
 }
