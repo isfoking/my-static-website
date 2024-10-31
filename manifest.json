@@ -39,30 +39,7 @@
       "sizes": "1024x593",
       "form_factor": "wide"
     },
-    {
-      "src": "./img/screenshots/a3.png",
-      "type": "image/png",
-      "sizes": "1024x593",
-      "form_factor": "wide"
-    },
-    {
-      "src": "./img/screenshots/a4.png",
-      "type": "image/png",
-      "sizes": "1024x593",
-      "form_factor": "wide"
-    },
-    {
-      "src": "./img/screenshots/a5.png",
-      "type": "image/png",
-      "sizes": "1024x593",
-      "form_factor": "wide"
-    },
-    {
-      "src": "./img/screenshots/a6.png",
-      "type": "image/png",
-      "sizes": "1024x593",
-      "form_factor": "wide"
-    },
+
     {
       "src": "./img/screenshots/m1.png",
       "type": "image/png",
