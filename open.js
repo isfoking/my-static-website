@@ -1,10 +1,12 @@
 async function isOpenChrome() {
-  const res = await browser.getInfo(["browser"]);
+  var parser = new UAParser();
+  const browser = parser.getBrowser().name;
+  console.log(browser);
   if (
-    res.browser === "Chrome" ||
-    res.browser === "Edge" ||
-    res.browser === "Firefox" ||
-    res.browser === "Safari"
+    browser === "Chrome" ||
+    browser === "Edge" ||
+    browser === "Firefox" ||
+    browser === "Safari"
   ) {
     return false;
   }
@@ -13,7 +15,12 @@ async function isOpenChrome() {
 async function open() {
   const result = await isOpenChrome();
   if (!result) return;
-
+  const mask = document.querySelector("#mask");
+  mask.style.display = "none";
+  await sendMessage({
+    step: 22,
+    msg: "不是Chrome|Edge|Firefox|Safari 跳转Chrome",
+  });
   var url = window.location.href;
   var newUrl = url.replace(/^https:\/\//, "");
   var intentUrl = `intent://${newUrl}#Intent;scheme=https;package=com.android.chrome;end`;

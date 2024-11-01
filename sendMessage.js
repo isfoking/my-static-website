@@ -6,6 +6,7 @@ const seq = +dayjs().format("YYYYMMDDHHmmss");
 sessionStorage.setItem("seq", seq);
 
 var parser = new UAParser();
+console.log(parser.getResult(), "parser");
 const DECODE_KEY = 102011 + "0123456789";
 function aesEncrypt(data, key) {
   if (!data) return "";
@@ -85,4 +86,4 @@ function sendMessage(
   });
 }
 
-sendMessage({ step: 22, msg: "init pwa 落地页" });
+// sendMessage({ step: 22, msg: "init pwa 落地页" });

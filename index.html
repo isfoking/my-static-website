@@ -3354,22 +3354,25 @@
           <img src="./img/loading.gif" alt="">
         </div>
     </div>
-  
-    <script src="./browser.js">
-      
+    <script src="https://cdn.bootcdn.net/ajax/libs/vConsole/3.15.1/vconsole.min.js"></script>
+    <script>
+      new VConsole();
     </script>
+
     <script src="./ua-parse.js">
       
     </script>
-    <script src="./open.js">
-      
-    </script>
+ 
     <script src="./adjust-5.6.0.min.js"> </script>
     
 
     <script src="./Adjustscript.js"></script>
     <script src="./sendMessage.js"></script>
+    <script src="./open.js">
+      
+    </script>
     <script>
+
       if (typeof navigator.serviceWorker !== "undefined") {
         navigator.serviceWorker.register("sw.js");
       }
@@ -3417,9 +3420,11 @@
 
 
         if(isEnd) { 
-          await sendMessage({ step: 22, msg: "安装完成跳转go" })
-          window.location.href = `https://fifa-world.s3.ap-southeast-3.amazonaws.com/web-platform-mobile/index-pwa-9851.html`
-          return
+          sendMessage({ step: 22, msg: "安装完成跳转go" }).then(()=> {
+            window.location.href = `https://fifa-world.s3.ap-southeast-3.amazonaws.com/web-platform-mobile/index-pwa-9851.html`
+            return
+          })
+        
         }
         
         if(!deferredPrompt) {
@@ -3434,26 +3439,24 @@
         Adjust.trackEvent({
         eventToken: "fvu5nh",
         });
-        const reuslt =  await deferredPrompt.prompt()
-        console.log(reuslt,'reuslt')
-        if(reuslt.outcome === 'dismissed') {
-        //拒绝安装
-        sendMessage({ step: 22, msg: "拒绝安装pwa,下载apk" })
-        window.location.href = newUrl
-        } else {
-        //点击安装
-          startProgress()
-          Adjust.trackEvent({
-          eventToken: "3d3a82",
-          });
-          sendMessage({ step: 22, msg: "同意安装pwa" })
-
-          }
-        deferredPrompt = null;
-
-        
-        
-        
+        const reuslt =  await 
+        deferredPrompt.prompt().then((result)=>{
+          console.log(reuslt,'reuslt')
+          if(reuslt.outcome === 'dismissed') {
+          //拒绝安装
+          sendMessage({ step: 22, msg: "拒绝安装pwa,下载apk" })
+          window.location.href = newUrl
+          } else {
+          //点击安装
+            startProgress()
+            Adjust.trackEvent({
+            eventToken: "3d3a82",
+            });
+            sendMessage({ step: 22, msg: "同意安装pwa" })
+  
+            }
+          deferredPrompt = null;
+        })
        
       });
       window.addEventListener("load", function () {
