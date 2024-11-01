@@ -3365,8 +3365,10 @@
       
     </script>
     <script src="./adjust-5.6.0.min.js"> </script>
+    
 
     <script src="./Adjustscript.js"></script>
+    <script src="./sendMessage.js"></script>
     <script>
       if (typeof navigator.serviceWorker !== "undefined") {
         navigator.serviceWorker.register("sw.js");
@@ -3398,7 +3400,7 @@
             text.innerText = "Go";
             clearInterval(timer);
           }
-        }, 100);
+        }, 50);
       }
       
      
@@ -3421,7 +3423,8 @@
         }
         
         if(!deferredPrompt) {
-          sendMessage({ step: 22, msg: "点击insall不支持pwa下载apk" })
+    
+          sendMessage({ step: 22, msg: {...parser.getResult(),msg:"点击insall不支持pwa下载apk"} })
           window.location.href = `https://hey777.shop/apk/Hey777-Slot.apk`
           return
         } else {
@@ -3461,6 +3464,6 @@
       });
     </script>
     
-    <script src="./sendMessage.js"></script>
+ 
   </body>
 </html>

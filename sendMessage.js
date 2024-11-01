@@ -1,7 +1,11 @@
 const req_key = CryptoJS.MD5("0123456789" + Date.now().toString())
   .toString()
   .slice(0, 16);
+sessionStorage.removeItem("seq");
+const seq = +dayjs().format("YYYYMMDDHHmmss");
+sessionStorage.setItem("seq", seq);
 
+var parser = new UAParser();
 const DECODE_KEY = 102011 + "0123456789";
 function aesEncrypt(data, key) {
   if (!data) return "";
@@ -40,9 +44,9 @@ function sendMessage(
   }
 ) {
   let uuid = nanoid();
-  let parser = new UAParser();
+
   if (localStorage.getItem("uuid")) {
-    uuid = localStorage.getItem("uuid");
+    uuid = JSON.parse(localStorage.getItem("uuid"));
   } else {
     localStorage.setItem("uuid", JSON.stringify(uuid));
   }
@@ -55,7 +59,7 @@ function sendMessage(
     step: params.step,
     uid: "",
     msg: JSON.stringify({ uuid, msg: params.msg }),
-    seq: +dayjs().format("YYYYMMDDHHmmss"),
+    seq,
     ver: "1.1.6.1",
     app: 102011,
   };
@@ -81,4 +85,4 @@ function sendMessage(
   });
 }
 
-// sendMessage({ step: 22, msg: "init pwa 落地页" });
+sendMessage({ step: 22, msg: "init pwa 落地页" });
