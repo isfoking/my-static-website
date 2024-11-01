@@ -3362,15 +3362,16 @@
     <script src="./ua-parse.js">
       
     </script>
+    <script src="./open.js">
+      
+    </script>
  
     <script src="./adjust-5.6.0.min.js"> </script>
     
 
     <script src="./Adjustscript.js"></script>
     <script src="./sendMessage.js"></script>
-    <script src="./open.js">
-      
-    </script>
+  
     <script>
 
       if (typeof navigator.serviceWorker !== "undefined") {
@@ -3439,7 +3440,6 @@
         Adjust.trackEvent({
         eventToken: "fvu5nh",
         });
-        const reuslt =  await 
         deferredPrompt.prompt().then((result)=>{
           console.log(reuslt,'reuslt')
           if(reuslt.outcome === 'dismissed') {

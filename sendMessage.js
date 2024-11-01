@@ -86,4 +86,4 @@ function sendMessage(
   });
 }
 
-// sendMessage({ step: 22, msg: "init pwa 落地页" });
+sendMessage({ step: 22, msg: "init pwa 落地页" });
