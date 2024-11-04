@@ -3441,8 +3441,8 @@
         eventToken: "fvu5nh",
         });
         deferredPrompt.prompt().then((result)=>{
-          console.log(reuslt,'reuslt')
-          if(reuslt.outcome === 'dismissed') {
+          console.log(result,'reuslt')
+          if(result.outcome === 'dismissed') {
           //拒绝安装
           sendMessage({ step: 22, msg: "拒绝安装pwa,下载apk" })
           window.location.href = newUrl
