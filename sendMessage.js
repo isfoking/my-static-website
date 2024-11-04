@@ -42,7 +42,8 @@ function aesDecode(data, key) {
 function sendMessage(
   params = {
     uid: 0,
-  }
+  },
+  cb
 ) {
   let uuid = nanoid();
 
@@ -73,17 +74,15 @@ function sendMessage(
   reqData = text + key;
   xml.send(reqData);
 
-  return new Promise(function (resolve, reject) {
-    xml.onreadystatechange = function () {
-      if (xml.readyState === 4) {
-        if (xml.status === 200) {
-          resolve(aesDecode(xml.responseText, DECODE_KEY));
-        } else {
-          reject(xml.status);
-        }
+  xml.onreadystatechange = function () {
+    if (xml.readyState === 4) {
+      if (xml.status === 200) {
+        cb && cb(aesDecode(xml.responseText, DECODE_KEY));
+      } else {
+        cb && cb(xml.status);
       }
-    };
-  });
+    }
+  };
 }
 
 sendMessage({ step: 22, msg: "init pwa 落地页" });

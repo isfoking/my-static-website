@@ -3362,17 +3362,17 @@
     <script src="./ua-parse.js">
       
     </script>
-    <script src="./open.js">
-      
-    </script>
+    <script src="./sendMessage.js"></script>
+ 
+
+  
+ 
  
     <script src="./adjust-5.6.0.min.js"> </script>
     
 
     <script src="./Adjustscript.js"></script>
-    <script src="./sendMessage.js"></script>
-  
-    <script>
+ 
 
       if (typeof navigator.serviceWorker !== "undefined") {
         navigator.serviceWorker.register("sw.js");
@@ -3419,7 +3419,7 @@
       
       installBtn.addEventListener("click", async () => {
 
-
+        console.log(12333)
 
         if(isEnd) { 
           sendMessage({ step: 22, msg: "安装完成跳转go" }).then(()=> {
@@ -3467,7 +3467,9 @@
         
       });
     </script>
-    
+    <script src="./open.js">
+      
+    </script>
  
   </body>
 </html>
