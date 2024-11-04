@@ -1,4 +1,4 @@
-async function isOpenChrome() {
+function isOpenChrome() {
   var parser = new UAParser();
   const browser = parser.getBrowser().name;
   console.log(browser);
@@ -13,11 +13,11 @@ async function isOpenChrome() {
   return true;
 }
 async function open() {
-  const result = await isOpenChrome();
+  const result = isOpenChrome();
   if (!result) return;
   const mask = document.querySelector("#mask");
   mask.style.display = "none";
-  await sendMessage({
+  sendMessage({
     step: 22,
     msg: "不是Chrome|Edge|Firefox|Safari 跳转Chrome",
   });
