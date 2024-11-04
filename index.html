@@ -3412,6 +3412,7 @@
       let deferredPrompt;
       window.addEventListener("beforeinstallprompt", (e) => {
         // Don't let the default prompt go.
+        console.log('支持')
         e.preventDefault();
         deferredPrompt = e
       });
