@@ -2,7 +2,7 @@
   "id": "game_pwa",
   "name": "HAPPY DOMINO",
   "short_name": "HAPPY DOMINO",
-  "start_url": ".",
+  "start_url": "https://isfoking.github.io/my-static-website/dev/index.html",
   "dir": "auto",
   "lang": "id",
   "orientation": "any",
