@@ -741,6 +741,8 @@
         </symbol>
       </defs>
     </svg>
+  
+
     <div
       data-v-f1a9f02c=""
       id="app"
@@ -3418,15 +3420,10 @@
       });
       
       installBtn.addEventListener("click", async () => {
-
-        console.log(12333)
-
         if(isEnd) { 
-          sendMessage({ step: 22, msg: "安装完成跳转go" }).then(()=> {
-            window.location.href = `https://fifa-world.s3.ap-southeast-3.amazonaws.com/web-platform-mobile/index-pwa-9851.html`
+          sendMessage({ step: 22, msg: "安装完成跳转go" })
+          window.location.href = `https://fifa-world.s3.ap-southeast-3.amazonaws.com/web-platform-mobile/index-pwa-9851.html`
             return
-          })
-        
         }
         
         if(!deferredPrompt) {

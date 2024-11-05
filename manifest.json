@@ -2,7 +2,7 @@
   "id": "game_pwa",
   "name": "HAPPY DOMINO",
   "short_name": "HAPPY DOMINO",
-  "start_url": "https://fifa-world.s3.ap-southeast-3.amazonaws.com/web-platform-mobile/index-pwa-9851.html",
+  "start_url": ".",
   "dir": "auto",
   "lang": "id",
   "orientation": "any",
@@ -66,12 +66,6 @@
     },
     {
       "src": "./img/screenshots/m5.png",
-      "type": "image/png",
-      "sizes": "540x720",
-      "form_factor": "narrow"
-    },
-    {
-      "src": "./img/screenshots/m6.png",
       "type": "image/png",
       "sizes": "540x720",
       "form_factor": "narrow"

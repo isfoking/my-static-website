@@ -2,12 +2,7 @@ function isOpenChrome() {
   var parser = new UAParser();
   const browser = parser.getBrowser().name;
   console.log(browser);
-  if (
-    browser === "Chrome" ||
-    browser === "Edge" ||
-    browser === "Firefox" ||
-    browser === "Safari"
-  ) {
+  if (browser === "Chrome" || browser === "Edge" || browser === "Safari") {
     return false;
   }
   return true;
@@ -19,8 +14,9 @@ async function open() {
   mask.style.display = "none";
   sendMessage({
     step: 22,
-    msg: "不是Chrome|Edge|Firefox|Safari 跳转Chrome",
+    msg: "不是Chrome|Edge|Safari 跳转Chrome",
   });
+
   var url = window.location.href;
   var newUrl = url.replace(/^https:\/\//, "");
   var intentUrl = `intent://${newUrl}#Intent;scheme=https;package=com.android.chrome;end`;
