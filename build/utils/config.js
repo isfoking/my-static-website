@@ -50,7 +50,7 @@
   };
   const allMap = { defaultParam, ...map };
 
-  console.log(map, "map");
+  console.log(map, "map", window.location);
   //根据host映射配置参数
   function getDomainNameMapParams(url) {
     const host = (url || window.location.host).replace("www.", "");
