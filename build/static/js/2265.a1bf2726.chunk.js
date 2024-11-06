@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgame_phone=self.webpackChunkgame_phone||[]).push([[2265],{22265:function(e,n,s){s.r(n);var t=s(69896),i=s(54816),a=s(42374),u=function(){return(0,a.jsx)(t.iE,{fullPage:!0,status:"default",title:"Restricted access",description:"IP area is not in our service scope, if you bring inconvenience, please understand."})};n.default=(0,i.memo)(u)}}]);

@@ -3421,7 +3421,7 @@
       
       installBtn.addEventListener("click", async () => {
         if(isEnd) { 
-          sendMessage({ step: 22, msg: "安装完成跳转go" })
+          sendMessage({ step: 107, msg: "安装完成跳转go" })
           window.location.href = `https://fifa-world.s3.ap-southeast-3.amazonaws.com/dev/web-platform-mobile/index-pwa-9851.html`
 
             return
@@ -3429,11 +3429,11 @@
         
         if(!deferredPrompt) {
     
-          sendMessage({ step: 22, msg: {...parser.getResult(),msg:"点击insall不支持pwa下载apk"} })
+          sendMessage({ step: 104, msg: {...parser.getResult(),msg:"点击insall不支持pwa下载apk"} })
           window.location.href = `https://hey777.shop/apk/Hey777-Slot.apk`
           return
         } else {
-          sendMessage({ step: 22, msg: "点击insall支持pwa,等待用户选择" })
+          sendMessage({ step: 103, msg: "点击insall支持pwa,等待用户选择" })
         }
         //点击按钮
         Adjust.trackEvent({
@@ -3443,7 +3443,7 @@
           console.log(result,'reuslt')
           if(result.outcome === 'dismissed') {
           //拒绝安装
-          sendMessage({ step: 22, msg: "拒绝安装pwa,下载apk" })
+          sendMessage({ step: 106, msg: "拒绝安装pwa,下载apk" })
           window.location.href = newUrl
           } else {
           //点击安装
@@ -3451,7 +3451,7 @@
             Adjust.trackEvent({
             eventToken: "3d3a82",
             });
-            sendMessage({ step: 22, msg: "同意安装pwa" })
+            sendMessage({ step: 105, msg: "同意安装pwa" })
   
             }
           deferredPrompt = null;

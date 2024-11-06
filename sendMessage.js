@@ -63,7 +63,7 @@ function sendMessage(
     msg: JSON.stringify({ uuid, msg: params.msg }),
     seq,
     ver: "1.1.6.1",
-    app: 102011,
+    app: 102024,
   };
 
   const xml = new XMLHttpRequest();
@@ -85,4 +85,4 @@ function sendMessage(
   };
 }
 
-sendMessage({ step: 22, msg: "init pwa 落地页" });
+sendMessage({ step: 101, msg: "init pwa 落地页" });

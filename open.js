@@ -13,8 +13,8 @@ async function open() {
   const mask = document.querySelector("#mask");
   mask.style.display = "none";
   sendMessage({
-    step: 22,
-    msg: "不是Chrome|Edge|Safari 跳转Chrome",
+    step: 102,
+    msg: { ...parser.getResult(), msg: "不是Chrome|Edge|Safari 跳转Chrome" },
   });
 
   var url = window.location.href;

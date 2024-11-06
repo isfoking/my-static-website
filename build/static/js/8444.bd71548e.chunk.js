@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkgame_phone=self.webpackChunkgame_phone||[]).push([[8444],{28444:function(e,a,n){n.r(a);var r=n(54816),t=n(47929),o=n(42374),m=function(){var e,a=null===(e=(0,t.TH)().state)||void 0===e?void 0:e.url;return(0,o.jsx)("iframe",{id:"iframeRef",className:"content",src:decodeURIComponent(a),frameBorder:"0",title:"game"})};a.default=(0,r.memo)(m)}}]);
