@@ -8,7 +8,6 @@
       registerEv: "79x5rs",
       buyEv: "5vxjet",
     },
-
   };
   const map = {
     "heyo7.com/": {
@@ -19,7 +18,6 @@
         registerEv: "7uwnix",
         buyEv: "p5qj77",
       },
-
     },
 
     "hey777.co/": {
@@ -32,7 +30,16 @@
     },
 
     "fifa-world.s3.ap-southeast-3.amazonaws.com/web-platform-mobile/index-pwa-9851.html":
-    {
+      {
+        appid: 102024,
+        adj: {
+          appToken: "nuijp1b9kow0",
+          registerEv: "r2063t",
+          buyEv: "xl20w0",
+        },
+      },
+
+    "isfoking.github.io/my-static-website/build/index.html": {
       appid: 102024,
       adj: {
         appToken: "nuijp1b9kow0",
@@ -41,30 +48,29 @@
       },
     },
   };
-  const allMap = {defaultParam,...map}
+  const allMap = { defaultParam, ...map };
   //根据host映射配置参数
   function getDomainNameMapParams(url) {
-    const host =  (url || window.location.host).replace("www.", "");
-    const pathname = window.location.pathname
-    return map[host] || map[host+pathname] || defaultParam;
-
+    const host = (url || window.location.host).replace("www.", "");
+    const pathname = window.location.pathname;
+    return map[host] || map[host + pathname] || defaultParam;
   }
 
   //根据appid查找对应的配置参数
   function getParamsByAppid() {
-    let result = defaultParam
-    const host = window.location.host
-    const pathname = window.location.pathname
-    const appid = sessionStorage.getItem('appid')
+    let result = defaultParam;
+    const host = window.location.host;
+    const pathname = window.location.pathname;
+    const appid = sessionStorage.getItem("appid");
     for (const key in allMap) {
-      if(allMap[key].appid === +appid) {
-        result = allMap[key]
+      if (allMap[key].appid === +appid) {
+        result = allMap[key];
       }
     }
-    if(map[host+pathname]) {
-      result = map[host+pathname]
+    if (map[host + pathname]) {
+      result = map[host + pathname];
     }
-    return result
+    return result;
   }
   window.getDomainNameMapParams = getDomainNameMapParams;
   window.getParamsByAppid = getParamsByAppid;
