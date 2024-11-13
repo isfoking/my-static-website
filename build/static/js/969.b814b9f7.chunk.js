@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkgame_phone=self.webpackChunkgame_phone||[]).push([[969],{80969:function(e,t,n){n.r(t);var u=n(69896),s=n(54816),o=n(42374),a=function(){return(0,o.jsx)(u.iE,{fullPage:!0,status:"empty",title:"404",description:"Resource not found"})};t.default=(0,s.memo)(a)}}]);
